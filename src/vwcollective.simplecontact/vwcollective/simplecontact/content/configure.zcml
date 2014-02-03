@@ -1,0 +1,42 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    i18n_domain="vwcollective.simplecontact">
+
+  <!-- configure your content components here -->
+  
+  <!-- -*- extra stuff goes here -*- -->
+  <class class=".contactfolder.ContactFolder">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.IContactFolder"
+        />
+    <require
+        permission="cmf.ModifyPortalContent"
+        set_schema="..interfaces.IContactFolder"
+        />
+  </class>
+  <class class=".simplecontact.SimpleContact">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.ISimpleContact"
+        />
+    <require
+        permission="cmf.ModifyPortalContent"
+        set_schema="..interfaces.ISimpleContact"
+        />
+  </class>
+  <class class=".simplecontactfolder.SimpleContactFolder">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.ISimpleContactFolder"
+        />
+    <require
+        permission="cmf.ModifyPortalContent"
+        set_schema="..interfaces.ISimpleContactFolder"
+        />
+  </class>
+  <adapter factory=".simplecontactfolder.PreviewTagProvider" />
+  <adapter factory=".contactfolder.PreviewTagProvider" />
+
+</configure>

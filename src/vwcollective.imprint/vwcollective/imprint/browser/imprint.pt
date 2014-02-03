@@ -1,0 +1,177 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="vwcollective.imprint">
+<body>
+    <div metal:fill-slot="main">
+        <tal:main-macro metal:define-macro="main"
+			tal:define="kssClassesView context/@@kss_field_decorator_view;
+                 		getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
+                 		templateId template/getId">
+		<div id="content-imprint">
+
+   			<div tal:replace="structure provider:plone.abovecontenttitle" />
+
+   			<h1 class="documentFirstHeading">
+   				<metal:field use-macro="python:context.widget('title', mode='view')">
+					Title
+				</metal:field>
+   			</h1>
+
+   			<div tal:replace="structure provider:plone.belowcontenttitle" />
+			
+			<p class="documentDescription">
+				<metal:field use-macro="python:context.widget('description', mode='view')">
+					Description
+				</metal:field>
+			</p>
+			
+			<div tal:replace="structure provider:plone.abovecontentbody" />
+		
+			<h3>
+				<metal:field use-macro="python:context.widget('company', mode='view')">
+					Company
+				</metal:field>
+			</h3>
+			
+			<p><metal:field use-macro="python:context.widget('street', mode='view')" />
+				<br />
+				<metal:field use-macro="python:context.widget('city', mode='view')" />
+			</p>
+			<p>
+				Telefon: <metal:field use-macro="python:context.widget('phone', mode='view')" /><br />
+				<span tal:condition="context/fax">Telefax: <metal:field use-macro="python:context.widget('fax', mode='view')" />
+				</span>
+			</p>
+			<p>
+				<tal:block tal:define="pmail context/email">
+					<script type="text/javascript">document.write(
+"R-Znvy:".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+</script>
+					<a href="" tal:replace="structure python:here.spamProtect(pmail)">
+							confuse the cat</a>
+				</tal:block><br />
+				<span tal:condition="context/web">Web: 
+					<a href="" tal:attributes="href context/web"
+						tal:content="context/web">Web</a>
+				</span>
+			</p>
+
+			<tal:additional tal:define="office context/head_office;
+                              		   legal context/jurisdiction;
+                                       register context/commercial_register;
+                                       tax context/tax_id">
+			<p tal:condition="python:office or legal or register or tax">
+				<span tal:condition="office">
+					Firmensitz: <metal:field use-macro="python:context.widget('headquarter', mode='view')" />
+				</span><br />
+			    <span tal:condition="legal">
+				Gerichtsstand: <metal:field use-macro="python:context.widget('jurisdiction', mode='view')" /></span>
+				<span tal:condition="register">
+				Handelsregisternummer: <metal:field use-macro="python:context.widget('commercialRegister', mode='view')" />
+				</span><br />
+				<span tal:condition="tax">
+				USt.-Id.Nr.:
+				<metal:field use-macro="python:context.widget('taxId', mode='view')">
+				Value Added Tax Identification Number
+				</metal:field>
+				</span>
+			</p>
+			</tal:additional>
+						
+			<p><span tal:condition="context/responsible_person">
+				Inhaltlich Verantwortlicher laut &sect; 10 Absatz 3 MDStV:<br />
+				<metal:field use-macro="python:context.widget('responsiblePerson', mode='view')" />
+				</span>
+			</p>
+			
+			<p>&nbsp;</p>
+			<h3>Gestaltung, Umsetzung und Hosting</h3>
+			<p>Vorw&auml;rts Werbung GbR<br />
+				Konrad-Adenauer-Allee 25<br />
+				86150 Augsburg<br />
+				Telefon: +49 (0) 821 319 48 10<br />
+				<tal:block tal:define="vwmail string:hallo@vorwaerts-werbung.de">
+				<script type="text/javascript">
+					document.write("R-Znvy:".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+				</script>
+				<a href="" tal:replace="structure python:here.spamProtect(vwmail)">
+					confuse the cat again
+				</a>
+				</tal:block><br />
+				Web: <a href="" tal:attributes="href string:http://www.vorwaerts-werbung.de;
+                  								target string:_blank"
+							tal:content="string:http://www.vorwaerts-werbung.de">
+							http://www.vorwaerts-werbung.de</a>
+				
+			<p>&nbsp;</p>
+			
+			<h3>Inhalt des Onlineangebotes:</h3>
+			<p><span tal:replace="context/company" /> &uuml;bernimmt keinerlei Gew&auml;hr f&uuml;r die
+			Aktualit&auml;t, Korrektheit, Vollst&auml;ndigkeit oder Qualit&auml;t der
+			bereitgestellten Informationen.
+			Haftungsanspr&uuml;che gegen <span tal:replace="context/company" />, welche sich auf
+			Sch&auml;den materieller oder ideeller Art beziehen, die durch die Nutzung
+			oder Nichtnutzung der dargebotenen Informationen bzw. durch die Nutzung
+			fehlerhafter und unvollst&auml;ndiger Informationen verursacht wurden sind
+			grunds&auml;tzlich ausgeschlossen, sofern seitens <span tal:replace="context/company" />
+			kein nachweislich vors&auml;tzliches oder grob fahrl&auml;ssiges Verschulden
+			vorliegt.
+			Alle Angebote sind freibleibend und unverbindlich.</p>
+			
+			<h3>Verweise und Links:</h3>
+			<p>Bei direkten oder indirekten Verweisen auf fremde Internetseiten [&#x27;Links&#x27;],
+			die au&szlig;erhalb des Verantwortungsbereiches von der <span tal:replace="context/company" /> liegen, w&uuml;rde eine Haftungsverpflichtung ausschlie&szlig;lich in
+			dem Fall in Kraft treten, in dem <span tal:replace="context/company" /> von den
+			Inhalten Kenntnis hat und es technisch m&ouml;glich und zumutbar w&auml;re, die
+			Nutzung im Falle rechtswidriger Inhalte zu verhindern.
+			<span tal:replace="context/company" /> hat keinerlei Einfluss auf die aktuelle und
+			zuk&uuml;nftige Gestaltung und auf die Inhalte der gelinkten/verkn&uuml;pften
+			Seiten. Deshalb distanziert sich hiermit <span tal:replace="context/company" />
+			ausdr&uuml;cklich von allen Inhalten aller gelinkten/verkn&uuml;pften Seiten, die
+			nach der Linksetzung ver&auml;ndert wurden.
+			Diese Feststellung gilt f&uuml;r alle innerhalb des eigenen
+			Internetangebotes gesetzten Links und Verweise sowie f&uuml;r Fremdeintr&auml;ge
+			in von <span tal:replace="context/company" /> eingerichteten G&auml;steb&uuml;chern,
+			Diskussionsforen und Mailinglisten.
+			F&uuml;r illegale, fehlerhafte oder unvollst&auml;ndige Inhalte und insbesondere
+			f&uuml;r Sch&auml;den, die aus der Nutzung oder Nichtnutzung solcherart
+			dargebotener Informationen entstehen, haftet allein der Anbieter der
+			Seite, auf welche verwiesen wurde, nicht derjenige, der &uuml;ber Links auf
+			die jeweilige Ver&ouml;ffentlichung lediglich verweist.</p>
+			
+			<h3>Urheber- und Kennzeichenrecht:</h3>
+			<p><span tal:replace="context/company" /> ist bestrebt, in allen Publikationen die
+			Urheberrechte der verwendeten Grafiken, Tondokumente, Videosequenzen
+			und Texte zu beachten, von ihr selbst erstellten Grafiken,
+			Tondokumente, Videosequenzen und Texte zu nutzen oder auf lizenzfreie
+			Grafiken, Tondokumente, Videosequenzen und Texte zur&uuml;ckzugreifen.
+			Alle innerhalb des Internetangebotes genannten und ggf. durch Dritte
+			gesch&uuml;tzten Marken- und Warenzeichen unterliegen uneingeschr&auml;nkt den
+			Bestimmungen des jeweils g&uuml;ltigen Kennzeichenrechts und den
+			Besitzrechten der jeweiligen eingetragenen Eigent&uuml;mer. Allein aufgrund
+			der blo&szlig;en Nennung ist nicht der Schlu&szlig; zu ziehen, dass Markenzeichen
+			nicht durch Rechte Dritter gesch&uuml;tzt sind!
+			Das Copyright f&uuml;r ver&ouml;ffentlichte, von <span tal:replace="context/company" /> selbst
+			erstellte Objekte bleibt allein bei <span tal:replace="context/company" />.
+			Eine Vervielf&auml;ltigung oder Verwendung solcher Grafiken, Tondokumente,
+			Videosequenzen und Texte in anderen elektronischen oder gedruckten
+			Publikationen ist ohne ausdr&uuml;ckliche Zustimmung durch <span tal:replace="context/company" />
+			nicht gestattet.</p>
+			
+			<h3>Rechtswirksamkeit dieses Haftungsausschlusses:</h3>
+			<p>Dieser Haftungsausschluss ist als Teil des Internetangebotes zu betrachten, von dem aus auf diese Seite verwiesen wurde.</p>
+			
+			<h3>Salvatorische Klausel:</h3>
+			<p>Sofern Teile oder einzelne Formulierungen dieses Textes der
+			geltenden Rechtslage nicht, nicht mehr oder nicht vollst&auml;ndig
+			entsprechen sollten, bleiben die &uuml;brigen Teile des Dokumentes in ihrem
+			Inhalt und ihrer G&uuml;ltigkeit davon unber&uuml;hrt.</p>
+			
+			<div tal:replace="structure provider:plone.belowcontentbody" />
+		
+		</div>
+        </tal:main-macro>
+    </div>
+</body>
+</html>

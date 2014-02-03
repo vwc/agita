@@ -1,0 +1,38 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="vwcollective.simplecontact">
+
+  <include package="plone.app.contentmenu" />
+
+  <!-- -*- extra stuff goes here -*- -->
+
+  <browser:page
+      for="..interfaces.IContactFolder"
+      name="view"
+      class=".contactfolderview.ContactFolderView"
+      permission="zope2.View"
+      />
+  <browser:menuItem
+    for="..interfaces.IContactFolder"
+    menu="plone_displayviews"
+    title="Contact Folder Overview"
+    action="@@view"
+    description="Default representation of a contact folder."
+    />
+    
+  <browser:page
+      for="..interfaces.ISimpleContactFolder"
+      name="view"
+      class=".contactfolder.ContactFolderView"
+      permission="zope2.View"
+      />
+  <browser:menuItem
+    for="..interfaces.ISimpleContactFolder"
+    menu="plone_displayviews"
+    title="Contact Folder View"
+    action="@@view"
+    description="Default representation of a contact folder."
+    />
+
+</configure>

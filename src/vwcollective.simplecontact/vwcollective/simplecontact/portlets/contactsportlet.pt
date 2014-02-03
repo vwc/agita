@@ -1,0 +1,34 @@
+<dl class="portlet portletContactsPortlet" id="contacts-portlet"
+    i18n:domain="vwcollective.simplecontact.portlets">
+
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        <span tal:content="structure view/Title">
+           Header
+        </span>
+        <span class="portletTopRight"></span>
+    </dt>
+    <tal:block tal:repeat="cat view/contactfolders">
+    <dd tal:define="oddrow repeat/cat/odd"
+	    tal:attributes="class python:oddrow and 'portletItem even' or 'portletItem odd'">
+	                <img tal:replace="structure cat/preview_tag" />
+	    <div class="cpTitle">
+        <a href="" tal:attributes="href cat/url;
+                                   title cat/title" 
+                   tal:content="cat/title">Title</a>
+        </div>
+        <div class="visualClear"><!-- --></div>
+    </dd>
+    </tal:block>
+
+    <dd class="portletFooter">
+        <span class="portletBottomLeft"></span>
+        <a href="#"
+            class="tile"
+            tal:attributes="href string:${here/portal_url}${view/root_data}">
+            Zur &Uuml;bersicht
+            </a>
+        <span class="portletBottomRight"></span>
+    </dd>
+
+</dl>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<portlets>
+
+ <!-- Portlet type registrations -->
+
+ <portlet
+   addview="agita.portlet.gallery.AgitaGalleryPortlet"
+   title="Agita Gallery Portlet"
+   description="A portlet showing an image gallery from an configurable source"
+   />
+
+</portlets>

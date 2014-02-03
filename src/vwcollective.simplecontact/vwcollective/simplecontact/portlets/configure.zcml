@@ -1,0 +1,24 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="vwcollective.simplecontact">
+
+  <!-- Ensure Plone's portlets ZCML has already been processed;
+       without this, we may get a permission lookup error -->
+  <include package="plone.app.portlets" />
+
+	<!-- -*- extra stuff goes here -*- -->
+
+  <plone:portlet
+      name="vwcollective.simplecontact.portlets.ContactsPortlet"
+      interface=".contactsportlet.IContactsPortlet"
+      assignment=".contactsportlet.Assignment"
+      view_permission="zope2.View"
+      edit_permission="cmf.ManagePortal"
+      renderer=".contactsportlet.Renderer"
+      addview=".contactsportlet.AddForm"
+      editview=".contactsportlet.EditForm"
+      />
+
+
+</configure>

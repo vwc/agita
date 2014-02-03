@@ -1,0 +1,87 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="vwcollective.simplecontact">
+<body>
+    <div metal:fill-slot="main">
+        <tal:main-macro metal:define-macro="main">
+
+        <div tal:replace="structure provider:plone.abovecontenttitle" />
+
+        <h1 class="documentFirstHeading">
+            <span metal:use-macro="python:context.widget('title', mode='view')" />
+        </h1>
+
+        <div tal:replace="structure provider:plone.belowcontenttitle" />
+
+        <div class="documentDescription">
+            <span metal:use-macro="python:context.widget('description', mode='view')" />
+        </div>
+
+        <div tal:replace="structure provider:plone.abovecontentbody" />
+
+        <tal:subfolders tal:condition="view/has_subfolders">
+            <div tal:repeat="folder view/contained_contactfolders">
+                <div class="cfItem">
+                    <div class="cfImage">
+                        <img tal:replace="structure folder/preview_tag" />
+                    </div>
+                    <div class="cfDetails">
+                    <div class="cfHeadline">
+                    <a href="" tal:attributes="href folder/url;
+                                               title folder/title">
+
+                    <span tal:content="folder/title">Title</span>
+                    </a>
+                    </div>
+                    <div class="cfDescription" tal:content="folder/description">Description</div>
+                    <div class="moreLink">
+                        <a href="" tal:attributes="href folder/url">Mehr&hellip;</a>
+                    </div>
+                    </div>
+                    <div class="visualClear"><!-- --></div>
+                </div>
+            </div>
+        </tal:subfolders>
+        
+        <tal:contacts tal:condition="not: view/has_subfolders">
+            <div class="contactInfo" tal:repeat="contact view/contained_contacts">
+                <div class="contactImage" tal:define="image contact/image">
+                    <img tal:attributes="src string:${contact/url}/image_thumb" />
+                </div>
+                <tal:block tal:define="file contact/file;
+                                 filename file/filename;
+                                 filesize file/get_size;
+                                 fileicon file/getBestIcon"
+                            tal:condition="python:filesize &gt; 0">
+                <div class="downloadBox">
+                     <a href="" tal:attributes="href string:${contact/url}/at_download/$filename">
+                       <img tal:condition="fileicon" src=""
+                            tal:attributes="src string:${here/portal_url}/$fileicon"/>
+                       Download
+                     </a><br />
+                     <span class="discreet">
+                         (<tal:filename tal:replace="filename"/>,
+                         <tal:filetype tal:replace="file/content_type" />,
+                         <tal:size content="python:'%sKb' % (filesize / 1024)">0Kb</tal:size>)
+                     </span>
+                </div>
+                </tal:block>
+                <div class="contactDetails">
+                    <div class="contactHeadline" tal:content="contact/title">Title</div>
+                    <div class="contactDetail" tal:content="contact/profession">Profession</div>
+                    <div class="contactDetail" tal:content="contact/position">Position</div>
+                    <div class="contactDetail">Tel. <span tal:replace="contact/phone" /></div>
+                    <div class="contactDetail" tal:define="mail contact/email">
+                        <a href="" tal:replace="structure python:here.spamProtect(mail)" />
+                    </div>
+                </div>
+                <div class="visualClear"><!-- --></div>
+            </div>
+        
+        </tal:contacts>
+
+        </tal:main-macro>
+    </div>
+</body>
+</html>

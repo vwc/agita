@@ -1,0 +1,115 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: vwcollective.imprint\n"
+"POT-Creation-Date: Fri Jan 25 14:19:18 2008\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Christoph Boehner <cb@vorwaerts-werbung.de>\n"
+"Language-Team: Christoph Boehner <cb@vorwaerts-werbung.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Code: de\n"
+"Language-Name: German\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: vwcollective.imprint\n"
+"X-Is-Fallback-For: de-at de-li de-lu de-ch de-de\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#. Default: "Imprint"
+#: .interfaces.py
+msgid "Imprint"
+msgstr "Impressum"
+
+#. Default: "Company"
+#: interfaces.py
+msgid "Company"
+msgstr "Name des Betreibers"
+
+#. Default: "The company name will be inserted in the disclaimers."
+#: .interfaces.py
+msgid "The company name will be inserted in the disclaimers."
+msgstr "Der Name oder Firmanname des Webseitenbetreibers."
+
+#. Default: "Street"
+#: .interfaces.py
+msgid "Street"
+msgstr "Straße und Hausnummer"
+
+#. Default: "City"
+#: .interfaces.py
+msgid "City"
+msgstr "PLZ und Ort"
+
+#. Default: "Phone"
+#: .interfaces.py
+msgid "Phone"
+msgstr "Telefon"
+
+#. Default: "Fax"
+#: .interfaces.py
+msgid "Fax"
+msgstr "Fax (falls vorhanden)"
+
+#. Default: "Email"
+#: .interfaces.py
+msgid "Email"
+msgstr "E-Mail"
+
+#. Default: "Enter a valid email address. The email address will automatically be spam protected."
+#: .interfaces.py
+msgid "Enter a valid email address. The email address will automatically be spam protected."
+msgstr "Gültige E-Mail Adresse, die automtisch gegen Spam gesichert und verschlüsselt dargestellt wird."
+
+#. Default: "Web"
+#: .interfaces.py
+msgid "Web"
+msgstr "Internetadresse"
+
+#. Default: "Jurisdiction"
+#: .interfaces.py
+msgid "Jurisdiction"
+msgstr "Gerichtsstand"
+
+#. Default: "The legal venue responsible for this company."
+#: .interfaces.py
+msgid "The legal venue responsible for this company."
+msgstr "Der in Rechtsfragen zuständige Gerichtsstand."
+
+#. Default: "Commercial Register Number"
+#: .interfaces.py
+msgid "Commercial Register Number"
+msgstr "Handelsregistereintrag"
+
+#. Default: "Optional commercial register number, if available."
+#: .interfaces.py
+msgid "Optional commercial register number, if available."
+msgstr "Kürzel des Handelsregistereintrags. Dieser kann z.B. bei eingetragenen Kaufleuten verplichtend sein."
+
+#. Default: "Value Added Tax Identification Number"
+#: .interfaces.py
+msgid "Value Added Tax Identification Number"
+msgstr "Umsatzsteuer-Identifikationsnummer (USt.-Id.Nr.)"
+
+#. Default: "Head Office"
+#: .interfaces.py
+msgid "Head Office"
+msgstr "Firmensitz"
+
+#. Default: "Enter potentially necessary registered office or company headquarter."
+#: .interfaces.py
+msgid "Enter potentially necessary registered office or company headquarter."
+msgstr "Optionaler Eintrag des Firmensitzes oder des Sitz der Gesellschaft (bei GmbHs)."
+
+#. Default: "Responsible Person"
+#: .interfaces.py
+msgid "Responsible Person"
+msgstr "Name des Verantwortlichen"
+
+#. Default: "Enter the names of the responsible individuals or executive directors."
+#: .interfaces.py
+msgid "Enter the names of the responsible individuals or executive directors."
+msgstr "Namen der für den Inhalt verantwortlichen Person."
+

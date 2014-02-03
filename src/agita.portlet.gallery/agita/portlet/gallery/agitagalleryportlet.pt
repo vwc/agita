@@ -1,0 +1,28 @@
+<dl class="portlet portletGalleryPortlet"
+    i18n:domain="agita.portlet.gallery">
+
+    <dt class="portletHeader">
+        Impressionen
+    </dt>
+
+    <dd class="portletItem odd" tal:define="images view/gallery_images">
+        <div class="scrollable">
+            <div class="items">
+                <tal:block tal:repeat="image images">
+                    <div>
+                    <img tal:define="pic image/getObject;
+                                     scale pic/@@images"
+                         tal:replace="structure python: scale.scale('image',
+                                      scale='thumb').tag()" />
+                    </div>
+                </tal:block>
+            </div>
+        </div>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $('.scrollable').scrollable({circular: true}).autoscroll({interval:3000});
+        });
+        </script>
+    </dd>
+
+</dl>

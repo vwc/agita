@@ -1,0 +1,2 @@
+recursive-include vwcollective *
+global-exclude *pyc
