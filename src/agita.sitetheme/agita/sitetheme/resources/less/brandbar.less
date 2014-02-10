@@ -3,6 +3,13 @@
 // -----------------------------------------
 
 .app-brandbar {
+    min-height: ceil((@navbar-height * 3));
     padding: @line-height-computed;
-    background: @app-mint;
+    background: url(../assets/img/header-background.jpg) no-repeat 0 0 @app-mint;
+    background-clip: cover;
+}
+
+.app-brand-claim {
+    color: @brand-primary;
+    font-weight: 600;
 }
