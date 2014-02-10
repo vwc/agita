@@ -9,3 +9,13 @@
 .app-header {
     .jumbotron();
 }
+
+.app-sign {
+    display: inline-block;
+    .square(@navbar-height);
+    text-align: center;
+    font-size: floor((@navbar-height / 2));
+    border: ceil((@line-height-computed / 4)) solid @gray-lighter;
+    border-radius: floor((@navbar-height / 2));
+    color: @gray-lighter;
+}

@@ -7,11 +7,14 @@
     <!-- Meta, title, CSS, favicons, etc. -->
     {% include head.html %}
   </head>
-  <body>
+  <body class="app-layout-simple">
     <a class="sr-only" href="#content">Skip navigation</a>
-    <div class="container" role="main">
-        {{ content }}
+    <div class="app-content" role="main">
+          {{ content }}
     </div>
     {% include javascript.html %}
+    <div class="app-js-slot">
+        {% include webfonts.html %}
+    </div>
 </body>
 </html>
