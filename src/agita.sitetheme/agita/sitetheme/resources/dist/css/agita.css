@@ -11622,10 +11622,10 @@ dd.image-caption
 .app-brandbar
 {
     min-height: 225px;
-    padding: 22px;
+    padding: 44px;
 
-    background: url(../assets/img/header-background.jpg) no-repeat 0 0 #c2e7d8;
-    background-clip: cover;
+    background: url(../assets/img/brandbar-bg.jpg) no-repeat 0 0 #c2e7d8;
+    background-size: cover;
 }
 .app-brand-claim
 {
@@ -11638,6 +11638,8 @@ dd.image-caption
     padding: 22px;
 
     border-top: 1px solid #eee;
+    background: url(../assets/img/footer.jpg) no-repeat 50% 0 #8fd9fc;
+    background-size: cover;
 }
 .app-toolbar + .app-navbar,
 .app-toolbar + .app-brandbar
@@ -11707,5 +11709,13 @@ dd.image-caption
     color: #eee;
     border: 6px solid #eee;
     border-radius: 37px;
+}
+.app-content
+{
+    background-image: -webkit-linear-gradient(top, #fff 0%, #cee49d 100%);
+    background-image:         linear-gradient(to bottom, #fff 0%, #cee49d 100%);
+    background-repeat: repeat-x;
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffcee49d', GradientType=0);
 }
 /*# sourceMappingURL=agita.css.map */
