@@ -160,22 +160,28 @@ module.exports = function (grunt) {
         },
 
         sed: {
-            'clean-source-assets': {
+            cleanSourceAssets: {
                 path: 'dist/',
                 pattern: '../../assets/',
                 replacement: '../assets/',
                 recursive: true
             },
-            'clean-source-css': {
+            cleanSourceCSS: {
                 path: 'dist/',
-                pattern: '../dist/css/styles.css',
-                replacement: 'css/styles.css',
+                pattern: '../dist/css/agita.css',
+                replacement: 'css/agita.css',
                 recursive: true
             },
-            'clean-source-js': {
+            cleanSourceJS: {
                 path: 'dist/',
-                pattern: '../dist/js/rms.js',
-                replacement: 'js/rms.min.js',
+                pattern: '../dist/js/agita.js',
+                replacement: 'js/agita.min.js',
+                recursive: true
+            },
+            cleanLogo: {
+                path: 'dist/',
+                pattern: '../assets/img/logo.png',
+                replacement: 'assets/img/logo.png',
                 recursive: true
             }
         },
