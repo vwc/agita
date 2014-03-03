@@ -11577,7 +11577,8 @@ dd.image-caption
 }
 .app-signin-header
 {
-    color: #555;
+    color: #eee;
+    background: #333;
 }
 .app-signin-header > h1
 {
