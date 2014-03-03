@@ -11577,11 +11577,21 @@ dd.image-caption
 }
 .app-signin-header
 {
-    color: #fff;
+    color: #555;
 }
 .app-signin-header > h1
 {
     font-weight: 300;
+}
+.app-signin-content
+{
+    padding: 22px 11px;
+}
+.app-signin-form .field > label
+{
+    font-weight: 300;
+
+    color: #555;
 }
 .app-signin-group
 {
@@ -11717,5 +11727,13 @@ dd.image-caption
     background-repeat: repeat-x;
 
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffcee49d', GradientType=0);
+}
+.app-content.app-content-simple
+{
+    background: #eee;
+}
+.app-content-body
+{
+    background: #fff;
 }
 /*# sourceMappingURL=agita.css.map */

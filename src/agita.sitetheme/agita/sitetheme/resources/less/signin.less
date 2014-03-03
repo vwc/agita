@@ -15,9 +15,20 @@
 }
 
 .app-signin-header {
-    color: #fff;
+    color: @gray;
     > h1 {
         font-weight: 300;
+    }
+}
+
+.app-signin-content {
+    padding: @line-height-computed ceil((@line-height-computed / 2));
+}
+
+.app-signin-form {
+    .field > label {
+        font-weight: 300;
+        color: @gray;
     }
 }
 
