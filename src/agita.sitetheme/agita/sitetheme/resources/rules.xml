@@ -71,7 +71,7 @@
 
         <!-- Global navigation -->
         <replace css:content="#portal-globalnav li"
-            css:theme-children="#main-nav" />
+            css:theme-children="#app-navbar-nav" />
 
         <!-- Breadcrumbs -->
         <replace css:content-children='#portal-breadcrumbs'
@@ -79,16 +79,16 @@
 
          <!-- Login form rules -->
         <replace css:content-children="#content-core"
-                css:theme-children="#app-signin-content"
+                css:theme-children="#app-signin-body"
                 css:if-content="body.template-login_form" />
         <replace css:content-children="#content-core"
-                css:theme-children="#app-signin-content"
+                css:theme-children="#app-signin-body"
                 css:if-content="body.template-login_failed" />
         <replace css:content-children="#content-core"
-                css:theme-children="#app-signin-content"
+                css:theme-children="#app-signin-body"
                 css:if-content="body.template-logged_out" />
         <replace css:content-children="#content"
-                css:theme-children="#app-signin-content"
+                css:theme-children="#app-signin-body"
                 css:if-content="body.template-mail_password_form" />
 
         <!-- Document Content -->
