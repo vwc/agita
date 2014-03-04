@@ -183,6 +183,48 @@ module.exports = function (grunt) {
                 pattern: '../assets/img/logo.png',
                 replacement: 'assets/img/logo.png',
                 recursive: true
+            },
+            cleanFooterLogo01: {
+                path: 'dist/',
+                pattern: '../assets/img/logo-stadt-augsburg.png',
+                replacement: 'assets/img/logo-stadt-augsburg.png',
+                recursive: true
+            },
+            cleanFooterLogo02: {
+                path: 'dist/',
+                pattern: '../assets/img/logo-landkreis-augsburg.png',
+                replacement: 'assets/img/logo-landkreis-augsburg.png',
+                recursive: true
+            },
+            cleanFooterLogo03: {
+                path: 'dist/',
+                pattern: '../assets/img/logo-bmfsfj.png',
+                replacement: 'assets/img/logo-bmfsfj.png',
+                recursive: true
+            },
+            cleanFooterLogo04: {
+                path: 'dist/',
+                pattern: '../assets/img/logo-eu.png',
+                replacement: 'assets/img/logo-eu.png',
+                recursive: true
+            },
+            cleanFooterLogo05: {
+                path: 'dist/',
+                pattern: '../assets/img/logo-esf.png',
+                replacement: 'assets/img/logo-esf.png',
+                recursive: true
+            },
+            cleanFooterLogo06: {
+                path: 'dist/',
+                pattern: '../assets/img/logo-hands.png',
+                replacement: 'assets/img/logo-hands.png',
+                recursive: true
+            },
+            cleanFooterFaces: {
+                path: 'dist/',
+                pattern: '../assets/img/faces.png',
+                replacement: 'assets/img/faces.png',
+                recursive: true
             }
         },
 

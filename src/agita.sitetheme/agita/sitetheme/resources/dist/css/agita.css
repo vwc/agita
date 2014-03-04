@@ -11653,6 +11653,10 @@ dd.image-caption
     background: url(../assets/img/footer.jpg) no-repeat 50% 0 #8fd9fc;
     background-size: cover;
 }
+.app-footer-contactbar
+{
+    color: #fff;
+}
 .app-toolbar + .app-navbar,
 .app-toolbar + .app-brandbar
 {
@@ -11724,15 +11728,19 @@ dd.image-caption
 }
 .app-content
 {
-    background-image: -webkit-linear-gradient(top, #fff 0%, #cee49d 100%);
-    background-image:         linear-gradient(to bottom, #fff 0%, #cee49d 100%);
+    background-image: -webkit-linear-gradient(top, #cee49d 0%, #fff 100%);
+    background-image:         linear-gradient(to bottom, #cee49d 0%, #fff 100%);
     background-repeat: repeat-x;
 
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffcee49d', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcee49d', endColorstr='#ffffffff', GradientType=0);
 }
 .app-content.app-content-simple
 {
     background: #eee;
+}
+.app-page-content
+{
+    padding: 22px;
 }
 .app-content-body
 {

@@ -22,11 +22,19 @@
 }
 
 .app-content {
-    #gradient > .vertical(#fff, @app-green-light, 0%, 100%);
+    #gradient > .vertical(@app-green-light, #fff, 0%, 100%);
     &.app-content-simple {
         background: @gray-lighter;
     }
 }
+
+.app-page-content {
+    padding: @line-height-computed;
+}
+
+//.app-page-header {
+//    #gradient > .vertical(#fff, @app-green-light, 0%, 100%);
+//}
 
 .app-content-body {
     background: #fff;
