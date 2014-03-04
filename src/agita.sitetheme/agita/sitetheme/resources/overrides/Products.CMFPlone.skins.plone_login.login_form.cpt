@@ -76,7 +76,7 @@
                   id="login_form"
                   tal:condition="use_normal">
 
-                <div id="login-form">
+                <div class="login-form" id="login-form">
 
                     <input type="hidden"
                         name="came_from"
@@ -119,15 +119,17 @@
                     <input type="hidden" name="login_name" id="login_name" value="" />
                     <input type="hidden" name="pwd_empty" id="pwd_empty" value="0" />
 
-                    <div class="field"
+                    <div class="field app-signin-group"
                          tal:define="error python:errors.get(ac_name, None);"
-                         tal:attributes="class python:test(error, 'field error', 'field')">
-
-                        <label i18n:translate="label_login_name"
+                         tal:attributes="class python:test(error, 'field app-signin-group error', 'field app-signin-group')">
+                      <div class="container">
+                        <label class="signin-label"
+                               i18n:translate="label_login_name"
                                tal:condition="not:use_email_as_login"
                                tal:attributes="for ac_name">Login Name</label>
 
-                        <label i18n:translate="label_email"
+                        <label class="signin-label"
+                               i18n:translate="label_email"
                                tal:condition="use_email_as_login"
                                tal:attributes="for ac_name">E-mail</label>
 
@@ -140,14 +142,15 @@
                                                id ac_name;
                                                value login_name;"
                                />
-
+                      </div>
                 </div>
 
-                <div class="field"
+                <div class="field app-signin-group"
                          tal:define="error python:errors.get(ac_password, None);"
-                         tal:attributes="class python:test(error, 'field error', 'field')">
-
-                        <label i18n:translate="label_password"
+                         tal:attributes="class python:test(error, 'field app-signin-group error', 'field app-signin-group')">
+                    <div class="container">
+                        <label class="signin-label"
+                              i18n:translate="label_password"
                                tal:attributes="for ac_password">Password</label>
 
                         <div tal:condition="error"
@@ -158,6 +161,7 @@
                                tal:attributes="name ac_password;
                                                id ac_password;"
                                />
+                    </div>
                 </div>
 
                     <div class="field" tal:condition="ac_persist">
@@ -191,6 +195,7 @@
 
                     </div>
                     <div class="formControls">
+                      <div class="container">
                         <input class="context"
                                type="submit"
                                name="submit"
@@ -202,6 +207,7 @@
                                 tal:attributes="href mail_password_url; target target;"
                                 i18n:translate="box_forgot_password_option">Forgot your password?</a>
                         </span>
+                      </div>
                     </div>
 
                 </div>

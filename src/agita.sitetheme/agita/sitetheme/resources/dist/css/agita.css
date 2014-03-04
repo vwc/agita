@@ -11580,7 +11580,7 @@ dd.image-caption
     color: #eee;
     background: #333;
 }
-.app-signin-header > h1
+.app-signin-title
 {
     font-weight: 300;
 }
@@ -11588,18 +11588,19 @@ dd.image-caption
 {
     padding: 22px 11px;
 }
-.app-signin-form .field > label
-{
-    font-weight: 300;
-
-    color: #555;
-}
 .app-signin-group
 {
     padding: 22px 0;
 
     border-bottom: 1px dotted #999;
     background: #fff;
+}
+.app-signin-group label,
+.app-signin-group .signin-label
+{
+    font-weight: 300;
+
+    color: #555;
 }
 .page-aside
 {

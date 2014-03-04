@@ -17,9 +17,9 @@
 .app-signin-header {
     background: @gray-dark;
     color: @gray-lighter;
-    > h1 {
-        font-weight: 300;
-    }
+}
+.app-signin-title {
+    font-weight: 300;
 }
 
 .app-signin-content {
@@ -27,16 +27,18 @@
 }
 
 .app-signin-form {
-    .field > label {
-        font-weight: 300;
-        color: @gray;
-    }
+    
 }
 
 .app-signin-group {
     padding: @line-height-computed 0;
     background: @navbar-default-bg;
     border-bottom: 1px dotted @gray-light;
+    label,
+    .signin-label {
+        font-weight: 300;
+        color: @gray;
+    }
 }
 
 .page-aside {
