@@ -131,6 +131,18 @@ module.exports = function (grunt) {
                 dest: 'dist/assets/img/'
             }
         },
+
+        imagemin: {
+            dynamic: {
+                files: [{
+                    expand: true,
+                    cwd: 'assets/img/',
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest: 'dist/assets/img/'
+                }]
+            }
+        },
+
         rev: {
             options:  {
                 algorithm: 'sha256',
