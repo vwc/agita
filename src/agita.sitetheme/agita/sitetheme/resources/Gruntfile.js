@@ -313,10 +313,11 @@ module.exports = function (grunt) {
     grunt.registerTask('dist-js', ['concat', 'uglify']);
 
     // CSS distribution task.
-    grunt.registerTask('dist-css', ['less', 'csscomb']);
+    grunt.registerTask('less-compile', ['less:compileTheme']);
+    grunt.registerTask('dist-css', ['less-compile', 'csscomb', 'less:minify']);
 
     // Assets distribution task.
-    grunt.registerTask('dist-assets', ['copy']);
+    grunt.registerTask('dist-assets', ['newer:copy', 'newer:imagemin']);
 
     // Cache buster distribution task.
     grunt.registerTask('dist-cb', ['rev']);
@@ -328,7 +329,7 @@ module.exports = function (grunt) {
     grunt.registerTask('dist-cc', ['test', 'concurrent:cj', 'concurrent:ha']);
 
     // Development task.
-    grunt.registerTask('dev', ['dist-css', 'dist-js', 'dist-html']);
+    grunt.registerTask('dev', ['less-compile', 'dist-js', 'dist-html']);
 
     // Full distribution task.
     grunt.registerTask('dist', ['clean', 'dist-css', 'dist-js', 'dist-html', 'dist-assets']);

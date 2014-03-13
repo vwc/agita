@@ -7,7 +7,6 @@
 }
 
 .app-signin {
-    .center-block();
     margin-top: (@navbar-height * 2);
     //background: @navbar-default-bg;
     // #gradient > .vertical(@start-color: #fff; @end-color: @gray-lighter);
@@ -23,7 +22,7 @@
 }
 
 .app-signin-content {
-    padding: @line-height-computed ceil((@line-height-computed / 2));
+    padding: @line-height-computed 0;
 }
 
 .app-signin-form {
@@ -31,13 +30,24 @@
 }
 
 .app-signin-group {
-    padding: @line-height-computed 0;
+    padding: 0;
     background: @navbar-default-bg;
-    border-bottom: 1px dotted @gray-light;
+    &.app-signin-group-text {
+        margin-top: @line-height-computed;
+        padding: ceil((@line-height-computed * 2)) 0;
+        border-top: 1px dotted @gray-light;
+    }
     label,
     .signin-label {
         font-weight: 300;
         color: @gray;
+    }
+}
+
+.app-signin-control {
+    padding: @line-height-computed 0 floor((@line-height-computed * 2));
+    &.app-signin-control-bordered {
+        border-bottom: 1px dotted @gray-light;
     }
 }
 
@@ -65,6 +75,6 @@
 
 .app-signin-actions,
 .app-register-actions {
-    padding: @line-height-computed 0;
+    padding: @line-height-computed;
 }
 

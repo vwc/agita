@@ -11567,11 +11567,7 @@ dd.image-caption
 }
 .app-signin
 {
-    display: block;
-
     margin-top: 150px;
-    margin-right: auto;
-    margin-left: auto;
 
     border-radius: 0;
 }
@@ -11586,14 +11582,20 @@ dd.image-caption
 }
 .app-signin-content
 {
-    padding: 22px 11px;
+    padding: 22px 0;
 }
 .app-signin-group
 {
-    padding: 22px 0;
+    padding: 0;
 
-    border-bottom: 1px dotted #999;
     background: #fff;
+}
+.app-signin-group.app-signin-group-text
+{
+    margin-top: 22px;
+    padding: 44px 0;
+
+    border-top: 1px dotted #999;
 }
 .app-signin-group label,
 .app-signin-group .signin-label
@@ -11601,6 +11603,14 @@ dd.image-caption
     font-weight: 300;
 
     color: #555;
+}
+.app-signin-control
+{
+    padding: 22px 0 44px;
+}
+.app-signin-control.app-signin-control-bordered
+{
+    border-bottom: 1px dotted #999;
 }
 .page-aside
 {
@@ -11629,7 +11639,7 @@ dd.image-caption
 .app-signin-actions,
 .app-register-actions
 {
-    padding: 22px 0;
+    padding: 22px;
 }
 .app-brandbar
 {
@@ -11726,17 +11736,16 @@ dd.image-caption
     border: 6px solid #eee;
     border-radius: 37px;
 }
-.app-content
-{
-    background-image: -webkit-linear-gradient(top, #cee49d 0%, #fff 100%);
-    background-image:         linear-gradient(to bottom, #cee49d 0%, #fff 100%);
-    background-repeat: repeat-x;
-
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcee49d', endColorstr='#ffffffff', GradientType=0);
-}
 .app-content.app-content-simple
 {
     background: #eee;
+}
+.app-page-title
+{
+    padding: 5px 10px;
+
+    color: #fff;
+    background-color: #283593;
 }
 .app-page-content
 {
