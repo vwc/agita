@@ -8982,7 +8982,7 @@ dd.image-caption {
 }
 @media (min-width: 768px) {
   .app-footer-logobar .logobar-item {
-    min-height: 44px;
+    min-height: 66px;
   }
 }
 .app-toolbar + .app-navbar,
