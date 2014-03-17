@@ -11667,6 +11667,51 @@ dd.image-caption
 {
     color: #fff;
 }
+.app-footer-logobar .logobar-title
+{
+    margin-bottom: 22px;
+}
+@media (min-width: 768px)
+{
+    .app-footer-logobar .logobar-item
+    {
+        line-height: 1.42857143;
+
+        display: block;
+
+        margin-bottom: 22px;
+        padding: 4px;
+
+        -webkit-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #fff;
+    }
+    .app-footer-logobar .logobar-item > img,
+  .app-footer-logobar .logobar-item a > img
+    {
+        display: block;
+
+        max-width: 100%;
+        height: auto;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    a.app-footer-logobar .logobar-item:hover,
+  a.app-footer-logobar .logobar-item:focus,
+  a.app-footer-logobar .logobar-item.active
+    {
+        border-color: #283593;
+    }
+    .app-footer-logobar .logobar-item .caption
+    {
+        padding: 9px;
+
+        color: #333;
+    }
+}
 .app-toolbar + .app-navbar,
 .app-toolbar + .app-brandbar
 {
