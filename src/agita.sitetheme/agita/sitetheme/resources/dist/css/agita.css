@@ -11546,4 +11546,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .app-content-body {
   background: #fff;
 }
+.app-content-body h2 {
+  padding-left: 33px;
+  background: url(../assets/img/smile-blue.png) no-repeat 0 50% transparent;
+  color: #2497d0;
+}
+.app-content-body h3 {
+  padding-left: 33px;
+  background: url(../assets/img/smile-green.png) no-repeat 0 50% transparent;
+  color: #6aa13c;
+}
 /*# sourceMappingURL=agita.css.map */
