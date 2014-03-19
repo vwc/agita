@@ -2,6 +2,12 @@
 // Application stylesheet
 // -----------------------------------------------
 
+
+.template-navigation-controlpanel .label:empty {
+    display: inline-block;
+}
+
+
 .app-toolbar + .app-navbar,
 .app-toolbar + .app-brandbar {
     margin-top: @navbar-height;
@@ -21,6 +27,21 @@
     color: @gray-lighter;
 }
 
+// Add plone selected class to twbs navbar styles
+
+.navbar-default .navbar-nav {
+    > .selected > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-default-link-active-color;
+        background-color: @navbar-default-link-active-bg;
+      }
+    }
+}
+
+
+
 .app-content {
     &.app-content-simple {
         background: @gray-lighter;
@@ -31,7 +52,7 @@
 .app-page-title {
     padding: @padding-small-vertical @padding-small-horizontal;
     color: #fff;
-    background-color: @app-blue-dark;
+    background-color: @app-blue;
 }
 
 .app-page-content {
@@ -44,4 +65,7 @@
 
 .app-content-body {
     background: #fff;
+    h2 {
+        color: @brand-primary
+    }
 }
