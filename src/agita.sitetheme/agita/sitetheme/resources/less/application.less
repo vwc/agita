@@ -66,13 +66,14 @@
 .app-content-body {
     background: #fff;
     h2 {
-        padding-left: ceil((@line-height-computed * 1.5));
+        padding: @line-height-computed @line-height-computed ceil((@line-height-computed * 1.5));
         background: url(../assets/img/smile-blue.png) no-repeat 0 50% transparent;
         color: @app-blue-light;
     }
     h3 {
-        padding-left: ceil((@line-height-computed * 1.5));
-        background: url(../assets/img/smile-green.png) no-repeat 0 50% transparent;
-        color: @app-secondary;
+        display: inline-block;
+        padding: @padding-large-vertical @padding-large-horizontal @padding-large-vertical ceil((@line-height-computed * 1.5));
+        background: url(../assets/img/smile-green.png) no-repeat ceil((@line-height-computed / 4)) ceil((@line-height-computed / 2)) @app-green-light;
+        color: #fff;
     }
 }
