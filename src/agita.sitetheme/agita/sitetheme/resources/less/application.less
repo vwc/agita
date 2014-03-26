@@ -12,6 +12,12 @@
 
 .app-navbar {
   text-transform: uppercase;
+  background: rgb(255, 255, 255); /* The Fallback */
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.app-toolbar {
+    font-size: @font-size-small;
 }
 
 .app-toolbar + .app-navbar,
@@ -86,11 +92,11 @@
 
 .app-content-body {
     background: #fff;
-    h2 {
-        padding: @line-height-computed @line-height-computed ceil((@line-height-computed * 1.5));
-        background: url(../assets/img/smile-blue.png) no-repeat 0 50% transparent;
-        color: @app-blue-light;
-    }
+    //h2 {
+    //    padding: @line-height-computed @line-height-computed ceil((@line-height-computed * 1.5));
+    //    background: url(../assets/img/smile-blue.png) no-repeat 0 50% transparent;
+    //    color: @app-blue-light;
+    //}
     h3 {
         display: inline-block;
         padding: @padding-large-vertical @padding-large-horizontal @padding-large-vertical ceil((@line-height-computed * 1.5));
@@ -100,11 +106,30 @@
 }
 
 // Style panel page editor
+
+.contentblock-header {
+    padding: @line-height-computed;
+    background-color: @app-green-light;
+}
+
+.contentblock-title {
+    .container();
+    color: #fff;
+}
+
+.contentblock-content {
+    padding: ceil((@line-height-computed * 2)) 0;
+}
+
 .contentblock-body {
     @media (min-width: @screen-sm-min) {
         .center-block();
         width: @container-sm;
         font-size: (@font-size-base + 2);
     }
+}
+
+.app-panelpage-content {
+    .container();
 }
 
