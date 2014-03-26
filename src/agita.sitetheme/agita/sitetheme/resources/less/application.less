@@ -2,11 +2,17 @@
 // Application stylesheet
 // -----------------------------------------------
 
+.visualClear {
+    .clearfix();
+}
 
 .template-navigation-controlpanel .label:empty {
     display: inline-block;
 }
 
+.app-navbar {
+  text-transform: uppercase;
+}
 
 .app-toolbar + .app-navbar,
 .app-toolbar + .app-brandbar {
@@ -49,19 +55,34 @@
 }
 
 
+.app-page-header {
+    margin-bottom: @line-height-computed;
+    padding: @line-height-computed 0;
+    font-size: floor((@font-size-base * 1.25));
+    font-weight: 200;
+    line-height: 1.4;
+    @media (min-width: @screen-sm-min) {
+        font-size: (@font-size-base * 1.75);
+    }
+}
+
 .app-page-title {
-    padding: @padding-small-vertical @padding-small-horizontal;
-    color: #fff;
-    background-color: @app-blue;
+    // padding: @padding-small-vertical @padding-small-horizontal;
+    // color: #fff;
+    // background-color: @app-blue-light;
+    .container();
+    .center-block();
+    margin: ceil((@line-height-computed * 2)) 0;
+    text-align: center;
+}
+.app-page-headline {
 }
 
-.app-page-content {
+.app-page-abstract {
+    .container();
     padding: @line-height-computed;
+    text-align: center;
 }
-
-//.app-page-header {
-//    #gradient > .vertical(#fff, @app-green-light, 0%, 100%);
-//}
 
 .app-content-body {
     background: #fff;

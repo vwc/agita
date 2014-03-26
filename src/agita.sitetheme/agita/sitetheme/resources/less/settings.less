@@ -11,6 +11,7 @@
 
 @app-green-light:               #cee49d;
 @app-mint:                      #c2e7d8;
+@app-green:                     #a3c73a;
 
 // Blue color palette
 @app-blue-lighter:              #8fd9fc;
@@ -40,6 +41,16 @@
 // Navbar settings
 @navbar-height:                 75px;
 
-@navbar-default-color:             #777;
+@navbar-default-color:             @app-gray;
 @navbar-default-bg:                #fff;
 @navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+@navbar-border-radius:             0;
+
+// Navbar links
+@navbar-default-link-color:                @app-gray;
+@navbar-default-link-hover-color:          darken(@app-gray, 6.5%);
+@navbar-default-link-hover-bg:             darken(@navbar-default-bg, 6.5%);
+@navbar-default-link-active-color:         darken(@app-gray, 6.5%);
+@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-link-disabled-color:       #ccc;
+@navbar-default-link-disabled-bg:          transparent;
