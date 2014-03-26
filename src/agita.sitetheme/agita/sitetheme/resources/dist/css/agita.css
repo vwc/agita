@@ -11571,7 +11571,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .app-content-body h3 {
   display: inline-block;
   padding: 10px 16px 10px 33px;
-  background: url(../assets/img/smile-green.png) no-repeat 6px 11px #cee49d;
+  background: url(../assets/img/smile-green.png) no-repeat 6px 22px #cee49d;
   color: #fff;
+}
+@media (min-width: 768px) {
+  .contentblock-body {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 750px;
+    font-size: 18px;
+  }
 }
 /*# sourceMappingURL=agita.css.map */

@@ -73,7 +73,17 @@
     h3 {
         display: inline-block;
         padding: @padding-large-vertical @padding-large-horizontal @padding-large-vertical ceil((@line-height-computed * 1.5));
-        background: url(../assets/img/smile-green.png) no-repeat ceil((@line-height-computed / 4)) ceil((@line-height-computed / 2)) @app-green-light;
+        background: url(../assets/img/smile-green.png) no-repeat ceil((@line-height-computed / 4)) @line-height-computed @app-green-light;
         color: #fff;
     }
 }
+
+// Style panel page editor
+.contentblock-body {
+    @media (min-width: @screen-sm-min) {
+        .center-block();
+        width: @container-sm;
+        font-size: (@font-size-base + 2);
+    }
+}
+
