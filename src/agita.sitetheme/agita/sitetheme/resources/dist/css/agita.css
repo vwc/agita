@@ -1,7 +1,7 @@
 /*!
  * agita
  */
-/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -2130,6 +2130,7 @@ table th[class*="col-"] {
 .table-hover > tbody > tr > td.active:hover,
 .table-hover > tbody > tr > th.active:hover,
 .table-hover > tbody > tr.active:hover > td,
+.table-hover > tbody > tr:hover > .active,
 .table-hover > tbody > tr.active:hover > th {
   background-color: #e8e8e8;
 }
@@ -2150,6 +2151,7 @@ table th[class*="col-"] {
 .table-hover > tbody > tr > td.success:hover,
 .table-hover > tbody > tr > th.success:hover,
 .table-hover > tbody > tr.success:hover > td,
+.table-hover > tbody > tr:hover > .success,
 .table-hover > tbody > tr.success:hover > th {
   background-color: #d0e9c6;
 }
@@ -2170,6 +2172,7 @@ table th[class*="col-"] {
 .table-hover > tbody > tr > td.info:hover,
 .table-hover > tbody > tr > th.info:hover,
 .table-hover > tbody > tr.info:hover > td,
+.table-hover > tbody > tr:hover > .info,
 .table-hover > tbody > tr.info:hover > th {
   background-color: #c4e3f3;
 }
@@ -2190,6 +2193,7 @@ table th[class*="col-"] {
 .table-hover > tbody > tr > td.warning:hover,
 .table-hover > tbody > tr > th.warning:hover,
 .table-hover > tbody > tr.warning:hover > td,
+.table-hover > tbody > tr:hover > .warning,
 .table-hover > tbody > tr.warning:hover > th {
   background-color: #faf2cc;
 }
@@ -2210,6 +2214,7 @@ table th[class*="col-"] {
 .table-hover > tbody > tr > td.danger:hover,
 .table-hover > tbody > tr > th.danger:hover,
 .table-hover > tbody > tr.danger:hover > td,
+.table-hover > tbody > tr:hover > .danger,
 .table-hover > tbody > tr.danger:hover > th {
   background-color: #ebcccc;
 }
@@ -2279,6 +2284,7 @@ legend {
 }
 label {
   display: inline-block;
+  max-width: 100%;
   margin-bottom: 5px;
   font-weight: bold;
 }
@@ -2365,14 +2371,23 @@ textarea.form-control {
 input[type="search"] {
   -webkit-appearance: none;
 }
-input[type="date"] {
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
   line-height: 39px;
   line-height: 1.42857143 \0;
 }
-input[type="date"].input-sm {
+input[type="date"].input-sm,
+input[type="time"].input-sm,
+input[type="datetime-local"].input-sm,
+input[type="month"].input-sm {
   line-height: 36px;
 }
-input[type="date"].input-lg {
+input[type="date"].input-lg,
+input[type="time"].input-lg,
+input[type="datetime-local"].input-lg,
+input[type="month"].input-lg {
   line-height: 53px;
 }
 .form-group {
@@ -2471,6 +2486,7 @@ select[multiple].input-lg {
   position: absolute;
   top: 30px;
   right: 0;
+  z-index: 2;
   display: block;
   width: 39px;
   height: 39px;
@@ -2706,14 +2722,14 @@ fieldset[disabled] .btn {
 .btn-default:focus,
 .btn-default:active,
 .btn-default.active,
-.open .dropdown-toggle.btn-default {
+.open > .dropdown-toggle.btn-default {
   color: #333333;
   background-color: #e6e6e6;
   border-color: #adadad;
 }
 .btn-default:active,
 .btn-default.active,
-.open .dropdown-toggle.btn-default {
+.open > .dropdown-toggle.btn-default {
   background-image: none;
 }
 .btn-default.disabled,
@@ -2747,14 +2763,14 @@ fieldset[disabled] .btn-default.active {
 .btn-primary:focus,
 .btn-primary:active,
 .btn-primary.active,
-.open .dropdown-toggle.btn-primary {
+.open > .dropdown-toggle.btn-primary {
   color: #ffffff;
   background-color: #1d276b;
   border-color: #151c4f;
 }
 .btn-primary:active,
 .btn-primary.active,
-.open .dropdown-toggle.btn-primary {
+.open > .dropdown-toggle.btn-primary {
   background-image: none;
 }
 .btn-primary.disabled,
@@ -2788,14 +2804,14 @@ fieldset[disabled] .btn-primary.active {
 .btn-success:focus,
 .btn-success:active,
 .btn-success.active,
-.open .dropdown-toggle.btn-success {
+.open > .dropdown-toggle.btn-success {
   color: #ffffff;
   background-color: #449d44;
   border-color: #398439;
 }
 .btn-success:active,
 .btn-success.active,
-.open .dropdown-toggle.btn-success {
+.open > .dropdown-toggle.btn-success {
   background-image: none;
 }
 .btn-success.disabled,
@@ -2829,14 +2845,14 @@ fieldset[disabled] .btn-success.active {
 .btn-info:focus,
 .btn-info:active,
 .btn-info.active,
-.open .dropdown-toggle.btn-info {
+.open > .dropdown-toggle.btn-info {
   color: #ffffff;
   background-color: #31b0d5;
   border-color: #269abc;
 }
 .btn-info:active,
 .btn-info.active,
-.open .dropdown-toggle.btn-info {
+.open > .dropdown-toggle.btn-info {
   background-image: none;
 }
 .btn-info.disabled,
@@ -2870,14 +2886,14 @@ fieldset[disabled] .btn-info.active {
 .btn-warning:focus,
 .btn-warning:active,
 .btn-warning.active,
-.open .dropdown-toggle.btn-warning {
+.open > .dropdown-toggle.btn-warning {
   color: #ffffff;
   background-color: #ec971f;
   border-color: #d58512;
 }
 .btn-warning:active,
 .btn-warning.active,
-.open .dropdown-toggle.btn-warning {
+.open > .dropdown-toggle.btn-warning {
   background-image: none;
 }
 .btn-warning.disabled,
@@ -2911,14 +2927,14 @@ fieldset[disabled] .btn-warning.active {
 .btn-danger:focus,
 .btn-danger:active,
 .btn-danger.active,
-.open .dropdown-toggle.btn-danger {
+.open > .dropdown-toggle.btn-danger {
   color: #ffffff;
   background-color: #c9302c;
   border-color: #ac2925;
 }
 .btn-danger:active,
 .btn-danger.active,
-.open .dropdown-toggle.btn-danger {
+.open > .dropdown-toggle.btn-danger {
   background-image: none;
 }
 .btn-danger.disabled,
@@ -3068,6 +3084,7 @@ tbody.collapse.in {
   margin: 2px 0 0;
   list-style: none;
   font-size: 18px;
+  text-align: left;
   background-color: #ffffff;
   border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
@@ -5384,7 +5401,7 @@ button.close {
 }
 .tooltip {
   position: absolute;
-  z-index: 1030;
+  z-index: 1070;
   display: block;
   visibility: visible;
   font-size: 16px;
@@ -5484,7 +5501,7 @@ button.close {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1010;
+  z-index: 1060;
   display: none;
   max-width: 276px;
   padding: 1px;
@@ -7983,10 +8000,10 @@ input.context.active,
 input.standalone.active,
 input.addreference.active,
 input.submit-widget.active,
-.open .dropdown-toggleinput.context,
-.open .dropdown-toggleinput.standalone,
-.open .dropdown-toggleinput.addreference,
-.open .dropdown-toggleinput.submit-widget {
+.open > .dropdown-toggleinput.context,
+.open > .dropdown-toggleinput.standalone,
+.open > .dropdown-toggleinput.addreference,
+.open > .dropdown-toggleinput.submit-widget {
   color: #333333;
   background-color: #e6e6e6;
   border-color: #adadad;
@@ -7999,10 +8016,10 @@ input.context.active,
 input.standalone.active,
 input.addreference.active,
 input.submit-widget.active,
-.open .dropdown-toggleinput.context,
-.open .dropdown-toggleinput.standalone,
-.open .dropdown-toggleinput.addreference,
-.open .dropdown-toggleinput.submit-widget {
+.open > .dropdown-toggleinput.context,
+.open > .dropdown-toggleinput.standalone,
+.open > .dropdown-toggleinput.addreference,
+.open > .dropdown-toggleinput.submit-widget {
   background-image: none;
 }
 input.context.disabled,
@@ -8084,14 +8101,14 @@ input.context:hover,
 input.context:focus,
 input.context:active,
 input.context.active,
-.open .dropdown-toggleinput.context {
+.open > .dropdown-toggleinput.context {
   color: #ffffff;
   background-color: #1d276b;
   border-color: #151c4f;
 }
 input.context:active,
 input.context.active,
-.open .dropdown-toggleinput.context {
+.open > .dropdown-toggleinput.context {
   background-image: none;
 }
 input.context.disabled,
@@ -11448,7 +11465,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   display: inline-block;
   padding: 5px 10px;
   color: #283593;
-  font-weight: 600;
+  font-weight: 400;
 }
 .app-brand-claim-primary {
   color: #fff;
@@ -11592,10 +11609,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 .contentblock-header {
   padding: 25px;
-  background-color: #cee49d;
 }
 .contentblock-title {
+  display: inline-block;
   color: #fff;
+  background-color: #cee49d;
 }
 .contentblock-content {
   padding: 50px 0;
@@ -11608,5 +11626,18 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     width: 750px;
     font-size: 20px;
   }
+}
+.app-panelpage-item {
+  border-bottom: 1px solid #555555;
+}
+.app-panelpage-item.item-odd {
+  padding-bottom: 5px;
+  border-color: #2497d0;
+  background: url(../assets/img/smile-blue.png) no-repeat 0 100% transparent;
+}
+.app-panelpage-item.item-even {
+  padding-bottom: 5px;
+  border-color: #cee49d;
+  background: url(../assets/img/smile-green.png) no-repeat 0 100% transparent;
 }
 /*# sourceMappingURL=agita.css.map */
