@@ -11457,20 +11457,23 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 .app-brandbar {
   min-height: 225px;
-  padding: 50px;
+  padding-bottom: 38px;
   background: url(../assets/img/brandbar-bg.jpg) no-repeat 0 0 #c2e7d8;
   background-size: cover;
+}
+.app-brand {
+  display: block;
+  margin-top: 25px;
+}
+.app-brand-claims {
+  padding-top: 25px;
 }
 .app-brand-claim {
   display: inline-block;
   padding: 5px 10px;
   color: #283593;
+  font-family: 'adelle-sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
-}
-@media (min-width: 768px) {
-  .app-brand-claim {
-    text-align: right;
-  }
 }
 .app-brand-claim-primary {
   color: #fff;

@@ -4,19 +4,26 @@
 
 .app-brandbar {
     min-height: ceil((@navbar-height * 3));
-    padding: ceil((@line-height-computed * 2));
+    padding-bottom: ceil((@line-height-computed * 1.5));
     background: url(../assets/img/brandbar-bg.jpg) no-repeat 0 0 @app-mint;
     background-size: cover;
+}
+
+.app-brand {
+    display: block;
+    margin-top: @line-height-computed;
+}
+
+.app-brand-claims {
+    padding-top: @line-height-computed;
 }
 
 .app-brand-claim {
     display: inline-block;
     padding: @padding-small-vertical @padding-small-horizontal;
     color: @brand-primary;
+    font-family: @font-family-base;
     font-weight: 300;
-    @media (min-width: @screen-sm) {
-        .text-right();
-    }
 }
 
 .app-brand-claim-primary {
