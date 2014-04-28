@@ -196,6 +196,18 @@ module.exports = function (grunt) {
                 replacement: 'assets/img/logo.png',
                 recursive: true
             },
+            cleanBrandlogo: {
+                path: 'dist/',
+                pattern: '../assets/img/kinderschutzbund.png',
+                replacement: 'assets/img/kinderschutzbund.png',
+                recursive: true
+            },
+            cleanContactTag: {
+                path: 'dist/',
+                pattern: '../assets/img/contact-tag.png',
+                replacement: 'assets/img/contact-tag.png',
+                recursive: true
+            },
             cleanFooterLogo01: {
                 path: 'dist/',
                 pattern: '../assets/img/logo-stadt-augsburg.png',

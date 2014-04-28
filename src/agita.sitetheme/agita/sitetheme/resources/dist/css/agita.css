@@ -884,7 +884,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'adelle-sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.42857143;
   color: #333333;
@@ -989,8 +989,8 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: 'Arimo', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-family: 'adelle', 'adelle-sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
   line-height: 1.1;
   color: inherit;
 }
@@ -4058,29 +4058,29 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-color: #eeeeee;
 }
 .navbar-default .navbar-brand {
-  color: #5a5f64;
+  color: #313131;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #424649;
+  color: #181818;
   background-color: transparent;
 }
 .navbar-default .navbar-text {
-  color: #5a5f64;
+  color: #313131;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #5a5f64;
+  color: #313131;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #4a4e53;
-  background-color: #eeeeee;
+  color: #ffffff;
+  background-color: #77c1a9;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #4a4e53;
-  background-color: #eeeeee;
+  color: #ffffff;
+  background-color: #77c1a9;
 }
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
@@ -4105,23 +4105,23 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #eeeeee;
-  color: #4a4e53;
+  background-color: #77c1a9;
+  color: #ffffff;
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #5a5f64;
+    color: #313131;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #4a4e53;
-    background-color: #eeeeee;
+    color: #ffffff;
+    background-color: #77c1a9;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #4a4e53;
-    background-color: #eeeeee;
+    color: #ffffff;
+    background-color: #77c1a9;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -4131,17 +4131,17 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default .navbar-link {
-  color: #5a5f64;
+  color: #313131;
 }
 .navbar-default .navbar-link:hover {
-  color: #4a4e53;
+  color: #ffffff;
 }
 .navbar-default .btn-link {
-  color: #5a5f64;
+  color: #313131;
 }
 .navbar-default .btn-link:hover,
 .navbar-default .btn-link:focus {
-  color: #4a4e53;
+  color: #ffffff;
 }
 .navbar-default .btn-link[disabled]:hover,
 fieldset[disabled] .navbar-default .btn-link:hover,
@@ -11465,7 +11465,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   display: inline-block;
   padding: 5px 10px;
   color: #283593;
-  font-weight: 400;
+  font-weight: 300;
+}
+@media (min-width: 768px) {
+  .app-brand-claim {
+    text-align: right;
+  }
 }
 .app-brand-claim-primary {
   color: #fff;
@@ -11474,6 +11479,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .app-brand-claim-secondary {
   color: #fff;
   background-color: #6aa13c;
+}
+.app-brand-claim-image {
+  display: inline-block;
+}
+.app-brand-contact {
+  padding: 13px;
+  background-color: #283593;
+}
+.app-brand-contact > a {
+  color: #fff;
 }
 .app-footer {
   background: url(../assets/img/footer.jpg) no-repeat 0 0 #8fd9fc;
@@ -11516,6 +11531,39 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   background: #ffffff;
   /* The Fallback */
   background: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+}
+.app-navbar-nav > li > a {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+@media (min-width: 768px) {
+  .app-navbar-nav {
+    width: 100%;
+  }
+  .app-navbar-nav > li {
+    float: none;
+  }
+  .app-navbar-nav > li > a {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  .app-navbar-nav > .dropdown .dropdown-menu {
+    top: auto;
+    left: auto;
+  }
+  .app-navbar-nav > li {
+    float: none;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .app-navbar-nav > li {
+    display: table-cell;
+    width: 1%;
+  }
+  .app-navbar-nav > li > a {
+    margin-bottom: 0;
+  }
 }
 .app-toolbar {
   font-size: 16px;
@@ -11575,15 +11623,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .navbar-default .navbar-nav > .selected > a,
 .navbar-default .navbar-nav > .selected > a:hover,
 .navbar-default .navbar-nav > .selected > a:focus {
-  color: #4a4e53;
-  background-color: #eeeeee;
+  color: #ffffff;
+  background-color: #77c1a9;
 }
 .app-content.app-content-simple {
   background: #eeeeee;
 }
 .app-page-header {
   margin-bottom: 25px;
-  padding: 25px 0;
   font-size: 22px;
   font-weight: 200;
   line-height: 1.4;
@@ -11594,11 +11641,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .app-page-title {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin: 50px 0;
-  text-align: center;
+  color: #8ecbb7;
 }
 .app-page-abstract {
   padding: 25px;
@@ -11632,7 +11675,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 .app-panelpage-item.item-odd {
   padding-bottom: 5px;
-  border-color: #2497d0;
+  border-color: #eaf5f1;
   background: url(../assets/img/smile-blue.png) no-repeat 0 100% transparent;
 }
 .app-panelpage-item.item-even {

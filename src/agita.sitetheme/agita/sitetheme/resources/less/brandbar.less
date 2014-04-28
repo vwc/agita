@@ -13,7 +13,10 @@
     display: inline-block;
     padding: @padding-small-vertical @padding-small-horizontal;
     color: @brand-primary;
-    font-weight: 400;
+    font-weight: 300;
+    @media (min-width: @screen-sm) {
+        .text-right();
+    }
 }
 
 .app-brand-claim-primary {
@@ -24,4 +27,16 @@
 .app-brand-claim-secondary {
     color: #fff;
     background-color: @app-secondary;
+}
+
+.app-brand-claim-image {
+    display: inline-block;
+}
+
+.app-brand-contact {
+    padding: ceil((@line-height-computed / 2));
+    background-color: @brand-primary;
+    > a {
+        color: #fff;
+    }
 }
