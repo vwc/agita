@@ -10826,7 +10826,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
 
     if (pos > (this.$items.length - 1) || pos < 0) return
 
-    if (this.sliding)       return this.$element.one('slid.bs.carousel', function () { that.to(pos) }) // yes, "slid". not a typo. past tense of "to slide".
+    if (this.sliding)       return this.$element.one('slid.bs.carousel', function () { that.to(pos) })
     if (activeIndex == pos) return this.pause().cycle()
 
     return this.slide(pos > activeIndex ? 'next' : 'prev', $(this.$items[pos]))
@@ -10880,7 +10880,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
 
     if (this.$indicators.length) {
       this.$indicators.find('.active').removeClass('active')
-      this.$element.one('slid.bs.carousel', function () { // yes, "slid". not a typo. past tense of "to slide".
+      this.$element.one('slid.bs.carousel', function () {
         var $nextIndicator = $(that.$indicators.children()[that.getActiveIndex()])
         $nextIndicator && $nextIndicator.addClass('active')
       })
@@ -10896,14 +10896,14 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
           $next.removeClass([type, direction].join(' ')).addClass('active')
           $active.removeClass(['active', direction].join(' '))
           that.sliding = false
-          setTimeout(function () { that.$element.trigger('slid.bs.carousel') }, 0) // yes, "slid". not a typo. past tense of "to slide".
+          setTimeout(function () { that.$element.trigger('slid.bs.carousel') }, 0)
         })
         .emulateTransitionEnd($active.css('transition-duration').slice(0, -1) * 1000)
     } else {
       $active.removeClass('active')
       $next.addClass('active')
       this.sliding = false
-      this.$element.trigger('slid.bs.carousel') // yes, "slid". not a typo. past tense of "to slide".
+      this.$element.trigger('slid.bs.carousel')
     }
 
     isCycling && this.cycle()
@@ -11024,7 +11024,8 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
 
     this.$element
       .removeClass('collapse')
-      .addClass('collapsing')[dimension](0)
+      .addClass('collapsing')
+      [dimension](0)
 
     this.transitioning = 1
 
@@ -11032,7 +11033,8 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
       if (e && e.target != this.$element[0]) return
       this.$element
         .removeClass('collapsing')
-        .addClass('collapse in')[dimension]('auto')
+        .addClass('collapse in')
+        [dimension]('auto')
       this.transitioning = 0
       this.$element.trigger('shown.bs.collapse')
     }
@@ -11043,7 +11045,8 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
 
     this.$element
       .one($.support.transition.end, $.proxy(complete, this))
-      .emulateTransitionEnd(350)[dimension](this.$element[0][scrollSize])
+      .emulateTransitionEnd(350)
+      [dimension](this.$element[0][scrollSize])
   }
 
   Collapse.prototype.hide = function () {
@@ -11055,7 +11058,9 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
 
     var dimension = this.dimension()
 
-    this.$element[dimension](this.$element[dimension]())[0].offsetHeight
+    this.$element
+      [dimension](this.$element[dimension]())
+      [0].offsetHeight
 
     this.$element
       .addClass('collapsing')
@@ -11303,12 +11308,11 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
   // ======================
 
   var Modal = function (element, options) {
-    this.options        = options
-    this.$body          = $(document.body)
-    this.$element       = $(element)
-    this.$backdrop      =
-    this.isShown        = null
-    this.scrollbarWidth = 0
+    this.options   = options
+    this.$body     = $(document.body)
+    this.$element  = $(element)
+    this.$backdrop =
+    this.isShown   = null
 
     if (this.options.remote) {
       this.$element
@@ -11339,7 +11343,6 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
 
     this.isShown = true
 
-    this.checkScrollbar()
     this.$body.addClass('modal-open')
 
     this.setScrollbar()
@@ -11486,14 +11489,11 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
     }
   }
 
-  Modal.prototype.checkScrollbar = function () {
-    if (document.body.clientWidth >= window.innerWidth) return
-    this.scrollbarWidth = this.scrollbarWidth || this.measureScrollbar()
-  }
-
   Modal.prototype.setScrollbar =  function () {
-    var bodyPad = parseInt(this.$body.css('padding-right') || 0)
-    if (this.scrollbarWidth) this.$body.css('padding-right', bodyPad + this.scrollbarWidth)
+    if (document.body.clientHeight <= window.innerHeight) return
+    var scrollbarWidth = this.measureScrollbar()
+    var bodyPad        = parseInt(this.$body.css('padding-right') || 0)
+    if (scrollbarWidth) this.$body.css('padding-right', bodyPad + scrollbarWidth)
   }
 
   Modal.prototype.resetScrollbar = function () {
