@@ -11623,6 +11623,19 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   border-radius: 37px;
   color: #eeeeee;
 }
+.navbar-default .navbar-nav > .selected:after {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  margin-left: -25px;
+  border-top: 25px solid #77c1a9;
+  border-right: 25px solid transparent;
+  border-left: 25px solid transparent;
+  content: "";
+}
+.navbar-default .navbar-nav > .selected > a {
+  position: relative;
+}
 .navbar-default .navbar-nav > .selected > a,
 .navbar-default .navbar-nav > .selected > a:hover,
 .navbar-default .navbar-nav > .selected > a:focus {
@@ -11648,6 +11661,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 .app-page-abstract {
   padding: 25px;
+}
+.hero-content {
+  padding: 25px 0;
+  background: #eaf5f1;
 }
 .app-content-body {
   background: #fff;

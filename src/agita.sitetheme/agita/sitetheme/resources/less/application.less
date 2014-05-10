@@ -57,7 +57,18 @@
 // Add plone selected class to twbs navbar styles
 
 .navbar-default .navbar-nav {
+    > .selected:after {
+        position: absolute;
+        bottom: -(@line-height-computed);
+        left: 50%;
+        margin-left: -(@line-height-computed);
+        border-top: @line-height-computed solid @navbar-default-link-active-bg;
+        border-right: @line-height-computed solid transparent;
+        border-left: @line-height-computed solid transparent;
+        content: "";
+    }
     > .selected > a {
+        position: relative;
       &,
       &:hover,
       &:focus {
@@ -83,7 +94,6 @@
         font-size: (@font-size-base * 1.75);
     }
 }
-
 .app-page-title {
     color: @app-blue;
 }
@@ -95,6 +105,12 @@
     padding: @line-height-computed;
     //text-align: center;
 }
+
+.hero-content {
+    padding: @line-height-computed 0;
+    background: @app-blue-light;
+}
+
 
 .app-content-body {
     background: #fff;

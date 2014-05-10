@@ -214,36 +214,6 @@ module.exports = function (grunt) {
                 replacement: 'assets/img/logo-stadt-augsburg.png',
                 recursive: true
             },
-            cleanFooterLogo02: {
-                path: 'dist/',
-                pattern: '../assets/img/logo-landkreis-augsburg.png',
-                replacement: 'assets/img/logo-landkreis-augsburg.png',
-                recursive: true
-            },
-            cleanFooterLogo03: {
-                path: 'dist/',
-                pattern: '../assets/img/logo-bmfsfj.png',
-                replacement: 'assets/img/logo-bmfsfj.png',
-                recursive: true
-            },
-            cleanFooterLogo04: {
-                path: 'dist/',
-                pattern: '../assets/img/logo-eu.png',
-                replacement: 'assets/img/logo-eu.png',
-                recursive: true
-            },
-            cleanFooterLogo05: {
-                path: 'dist/',
-                pattern: '../assets/img/logo-esf.png',
-                replacement: 'assets/img/logo-esf.png',
-                recursive: true
-            },
-            cleanFooterLogo06: {
-                path: 'dist/',
-                pattern: '../assets/img/logo-hands.png',
-                replacement: 'assets/img/logo-hands.png',
-                recursive: true
-            },
             cleanFooterFaces: {
                 path: 'dist/',
                 pattern: '../assets/img/faces.png',
@@ -308,6 +278,7 @@ module.exports = function (grunt) {
     grunt.registerTask('copy-templates', '', function () {
         grunt.file.copy('_site/index.html', 'dist/theme.html');
         grunt.file.copy('_site/signin/index.html', 'dist/signin.html');
+        grunt.file.copy('_site/panelpage/index.html', 'dist/panelpage.html');
     });
 
     // Docs HTML validation task
