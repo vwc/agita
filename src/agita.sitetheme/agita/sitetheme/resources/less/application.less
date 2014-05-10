@@ -172,8 +172,19 @@
 
 .contentpanel {
     h2 {
-        border-left: 2 px solid @app-blue;
+        border-left: 2px solid @app-blue;
         color: @app-blue;
+    }
+    &.contentpanel-subheading {
+        padding-left: ceil((@line-height-computed / 2));
+        border-left: 2px solid @app-blue;
+        color: @app-blue;
+    }
+    &.contentpanel-richtext {
+        font-size: (@font-size-base + 2);
+        @media (min-width: @screen-md-min) {
+            width: @container-md;
+        }
     }
 }
 

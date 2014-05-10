@@ -11493,6 +11493,31 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .app-brand-contact > a {
   color: #fff;
 }
+.hero-header {
+  margin-bottom: -18.75px;
+}
+.nav-hero-toc > li > a {
+  font-size: 18px;
+  font-weight: 400;
+  color: #8ecbb7;
+  border: 2px solid #8ecbb7;
+  border-radius: 0;
+}
+.nav-hero-toc > li.active > a,
+.nav-hero-toc > li.active > a:hover,
+.nav-hero-toc > li.active > a:focus {
+  color: #fff;
+  background-color: #8ecbb7;
+}
+.contentpanel-hero-subheading {
+  margin: 25px;
+}
+.contentpanel-hero-subheading .contentpanel-subheading {
+  display: inline-block;
+  padding: 6px 12px;
+  color: #fff;
+  background-color: #8ecbb7;
+}
 .app-footer {
   background: url(../assets/img/footer.jpg) no-repeat 0 0 #8fd9fc;
   background-size: cover;
@@ -11703,7 +11728,20 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   background: url(../assets/img/smile-green.png) no-repeat 0 100% transparent;
 }
 .contentpanel h2 {
-  border-left: 2 px solid #8ecbb7;
+  border-left: 2px solid #8ecbb7;
   color: #8ecbb7;
+}
+.contentpanel.contentpanel-subheading {
+  padding-left: 13px;
+  border-left: 2px solid #8ecbb7;
+  color: #8ecbb7;
+}
+.contentpanel.contentpanel-richtext {
+  font-size: 20px;
+}
+@media (min-width: 992px) {
+  .contentpanel.contentpanel-richtext {
+    width: 970px;
+  }
 }
 /*# sourceMappingURL=agita.css.map */

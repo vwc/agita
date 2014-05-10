@@ -1,0 +1,35 @@
+//
+// Hero content block
+// ------------------------------------------------
+
+.hero-header {
+  margin-bottom: -((@line-height-computed * .75));
+}
+
+.nav-hero-toc {
+  > li > a {
+    font-size: @font-size-base;
+    font-weight: 400;
+    color: @app-blue;
+    border: 2px solid @app-blue;
+    border-radius: 0;
+  }
+  > li.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: #fff;
+        background-color: @app-blue;
+      }
+    }
+}
+
+.contentpanel-hero-subheading {
+  margin: @line-height-computed;
+  .contentpanel-subheading {
+    display: inline-block;
+    padding: @padding-base-vertical @padding-base-horizontal;
+    color: #fff;
+    background-color: @app-blue;
+  }
+}

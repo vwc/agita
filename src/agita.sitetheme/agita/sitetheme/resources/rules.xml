@@ -107,6 +107,15 @@
 
         <rules css:if-content="body.portaltype-ade25-panelpage-page">
             <!-- Panel page transforms -->
+            <replace css:content-children=".documentFirstHeading"
+                css:theme-children="#app-page-title" />
+            <rules css:if-content="body.template-view">
+                <!-- We only use the content panels when actually viewing a
+                     panel page
+                 -->
+                <replace css:content="#panelgrid-row-0"
+                    css:theme="#contentpanel-hero-lead" />
+            </rules>
         </rules>
 
         <!-- Document Content -->
