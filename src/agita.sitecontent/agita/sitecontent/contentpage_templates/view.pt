@@ -24,9 +24,18 @@
           <div tal:replace="structure context/toc/output" />
         </div>
     </div>
-    <div class="app-page-lead-images" id="app-page-lead-images">
-      <div class="well well-default">
-        <p>This should be the image teaser block</p>
+    <div class="app-page-lead-images" id="app-page-lead-images"
+      tal:condition="view/has_images">
+      <div class="row">
+        <tal:block tal:repeat="item view/lead_images">
+          <div class="col-xs-12 col-sm-4">
+            <img tal:define="obj item/getObject;
+                             scales obj/@@images"
+              tal:replace="structure python: scales.tag('image',
+                           width=200, height=200, direction='down')"
+              />
+          </div>
+        </tal:block>
       </div>
     </div>
     <div id="content-core">

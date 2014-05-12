@@ -1,4 +1,6 @@
+from Acquisition import aq_inner
 from five import grok
+from plone import api
 
 from plone.indexer import indexer
 from plone.dexterity.content import Container
@@ -41,3 +43,15 @@ class View(grok.View):
     grok.context(IContentPage)
     grok.require('zope2.View')
     grok.name('view')
+
+    def update(self):
+        self.has_images = len(self.lead_images()) > 0
+
+    def lead_images(self):
+        context = aq_inner(self.context)
+        catalog = api.portal.get_tool(name='portal_catalog')
+        items = catalog(portal_type=['Image'],
+                        path=dict(query='/'.join(context.getPhysicalPath()),
+                                  depth=1),
+                        limit=3)[:3]
+        return items

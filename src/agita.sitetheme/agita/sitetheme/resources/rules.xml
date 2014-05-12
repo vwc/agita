@@ -107,16 +107,22 @@
                 css:if-content="body.template-pwreset_finish" />
 
         <rules css:if-content="body.portaltype-agita-sitecontent-contentpage">
-            <replace css:content-children=".documentFirstHeading"
-                css:theme-children="#app-page-title" />
-            <replace css:content-children="#app-page-abstract"
-                css:theme-children="#hero-lead" />
-            <replace css:content-children="#app-page-body"
-                css:theme-children="#hero-toc" />
-            <replace css:content-children="#app-page-lead-images"
-                css:theme-children="#hero-gallery" />
-            <replace css:content-children="#content-core"
-                css:theme-children="#content" />
+            <rules css:if-content="body.template-view">
+                <replace css:content-children=".documentFirstHeading"
+                    css:theme-children="#app-page-title" />
+                <replace css:content-children="#app-page-abstract"
+                    css:theme-children="#hero-lead"
+                    css:if-content="#app-page-abstract" />
+                <replace css:content-children="#app-page-body"
+                    css:theme-children="#hero-toc"
+                    css:if-content="#app-page-body" />
+                <replace css:content-children="#app-page-lead-images"
+                    css:theme-children="#hero-gallery" />
+                <replace css:content-children="#content-core"
+                    css:theme-children="#content" />
+            </rules>
+            <drop css:theme="#hero-content"
+                css:if-not-content="body.template-view" />
         </rules>
 
         <rules css:if-content="body.portaltype-ade25-panelpage-page">
