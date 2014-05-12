@@ -129,6 +129,12 @@ module.exports = function (grunt) {
                 flatten: true,
                 src: ['assets/img/*'],
                 dest: 'dist/assets/img/'
+            },
+            favicon: {
+                expand: true,
+                flatten: true,
+                src: ['assets/ico/*'],
+                dest: 'dist/assets/ico/'
             }
         },
 
