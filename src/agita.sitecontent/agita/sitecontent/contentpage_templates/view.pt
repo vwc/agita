@@ -12,15 +12,22 @@
 
     <div class="app-page-content" id="app-page-content">
         <div class="app-page-header" id="app-page-header">
-          <div class="app-page-title">
+          <div class="app-page-title" id="app-page-title">
             <h1 class="documentFirstHeading app-page-headline" tal:content="context/Title" />
           </div>
-            <p class="documentDescription lead app-page-abstract" tal:condition="context/Description"
-              tal:content="context/Description" />
+          <p class="documentDescription lead app-page-abstract"
+            id="app-page-abstract"
+            tal:condition="context/Description"
+            tal:content="context/Description" />
         </div>
-        <div class="app-page-body">
+        <div class="app-page-body" id="app-page-body" tal:condition="context/toc">
           <div tal:replace="structure context/toc/output" />
         </div>
+    </div>
+    <div class="app-page-lead-images" id="app-page-lead-images">
+      <div class="well well-default">
+        <p>This should be the image teaser block</p>
+      </div>
     </div>
     <div id="content-core">
       <div tal:replace="structure provider:plone.belowcontentbody" />
