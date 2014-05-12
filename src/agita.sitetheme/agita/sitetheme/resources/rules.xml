@@ -48,7 +48,7 @@
         <!-- Custom favicon implementation -->
         <!--<drop content="link[@type='image/x-icon']" />
         <after theme="/html/head">
-            <link rel="shortcut icon" href="/++theme++agita.jmstheme/img/favicon.ico" type="images/x-icon" />
+            <link rel="shortcut icon" href="/++theme++agita.sitetheme/assets/ico/favicon.ico" type="images/x-icon" />
         </after>-->
 
         <!-- Copy over the id/class attributes on the body tag.
@@ -113,8 +113,18 @@
                 <!-- We only use the content panels when actually viewing a
                      panel page
                  -->
-                <replace css:content="#panelgrid-row-0"
-                    css:theme="#contentpanel-hero-lead" />
+                <replace css:content-children="#panelgrid-row-0"
+                    css:theme-children="#contentpanel-hero-lead" />
+                <replace css:theme-children="#content"
+                    css:content-children="#content" />
+                <!-- <replace
+                    content=".panelgrid-row[not(position() &lt; 2]"
+                    css:theme-children="#content" /> -->
+                <!--<replace css:theme-children="#content">
+                    <xsl:for-each select="//div[@class='panelgrid-row'][not(position() &lt; 2)]">
+                        <xsl:apply-templates select="."/>
+                    </xsl:for-each>
+                </replace>-->
             </rules>
         </rules>
 
