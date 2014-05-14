@@ -173,10 +173,12 @@
 
 .contentpanel {
     h2 {
+        padding-left: ceil((@line-height-computed / 2));
         border-left: 2px solid @app-blue;
         color: @app-blue;
     }
-    &.contentpanel-subheading {
+    h3,
+    .contentpanel-subheading {
         padding-left: ceil((@line-height-computed / 2));
         border-left: 2px solid @app-blue;
         color: @app-blue;
