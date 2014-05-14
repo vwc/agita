@@ -46,6 +46,13 @@ def rebuild():
 
 
 @task
+def develop(*cmd):
+    """Runs arbitrary mr.developer bin/develop command."""
+    with cd(env.code_root):
+        run('nice bin/develop ' + ' '.join(cmd))
+
+
+@task
 def get_data():
     """ Copy live database for local development """
     project.db.download_data()
