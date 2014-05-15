@@ -14963,6 +14963,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 {
     display: inline-block;
 }
+.userrole-authenticated .cbp-spmenu-vertical
+{
+    top: 75px;
+}
 .app-navbar
 {
     font-size: 16px;
