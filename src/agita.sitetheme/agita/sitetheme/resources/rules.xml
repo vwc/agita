@@ -127,6 +127,8 @@
 
         <rules css:if-content="body.portaltype-ade25-panelpage-page">
             <!-- Panel page transforms -->
+            <drop css:theme="#app-page-title"
+                css:if-not-content=".documentFirstHeading" />
             <replace css:content-children=".documentFirstHeading"
                 css:theme-children="#app-page-title" />
             <rules css:if-content="body.template-view">
