@@ -13,6 +13,11 @@
     color: @app-blue;
     border: 2px solid @app-blue;
     border-radius: 0;
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: @app-blue;
+    }
   }
   > li.active > a {
       &,
@@ -22,6 +27,10 @@
         background-color: @app-blue;
       }
     }
+}
+
+.back-to-top {
+  font-size: @font-size-small;
 }
 
 .contentpanel-hero-subheading {
