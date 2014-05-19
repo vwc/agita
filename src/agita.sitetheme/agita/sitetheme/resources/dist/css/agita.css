@@ -11710,6 +11710,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .panelgrid {
   max-width: 750px;
 }
+body.template-frontpage-view .panelgrid {
+  max-width: 1170px;
+}
 .contentblock-header {
   padding: 25px;
 }
