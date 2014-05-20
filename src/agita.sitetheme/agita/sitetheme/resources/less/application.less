@@ -10,6 +10,11 @@
     display: inline-block;
 }
 
+.userrole-authenticated .cbp-spmenu-vertical {
+  top: 75px;
+}
+
+
 .app-navbar {
   text-transform: uppercase;
   background: rgb(255, 255, 255); /* The Fallback */
@@ -58,15 +63,17 @@
 // Add plone selected class to twbs navbar styles
 
 .navbar-default .navbar-nav {
-    > .selected:after {
-        position: absolute;
-        bottom: -(@line-height-computed);
-        left: 50%;
-        margin-left: -(@line-height-computed);
-        border-top: @line-height-computed solid @navbar-default-link-active-bg;
-        border-right: @line-height-computed solid transparent;
-        border-left: @line-height-computed solid transparent;
-        content: "";
+    @media (min-width: @screen-sm-min) {
+        > .selected:after {
+            position: absolute;
+            bottom: -(@line-height-computed);
+            left: 50%;
+            margin-left: -(@line-height-computed);
+            border-top: @line-height-computed solid @navbar-default-link-active-bg;
+            border-right: @line-height-computed solid transparent;
+            border-left: @line-height-computed solid transparent;
+            content: "";
+        }
     }
     > .selected > a {
         position: relative;
@@ -112,12 +119,6 @@
     background: @app-blue-light;
 }
 
-.app-page-content {
-    b,
-    strong {
-        font-weight: 600;
-    }
-}
 
 .app-content-body {
     background: #fff;
@@ -132,6 +133,14 @@
     //     background: url(../assets/img/smile-green.png) no-repeat ceil((@line-height-computed / 4)) @line-height-computed @app-green-light;
     //     color: #fff;
     // }
+}
+
+.panelgrid {
+    max-width: @container-sm;
+}
+
+body.template-frontpage-view .panelgrid {
+    max-width: @container-lg;
 }
 
 // Style panel page editor
@@ -178,13 +187,8 @@
 }
 
 .contentpanel {
-    h2 {
-        padding-left: ceil((@line-height-computed / 2));
-        border-left: 2px solid @app-blue;
-        color: @app-blue;
-    }
-    h3,
-    .contentpanel-subheading {
+    h2,
+    h3 {
         padding-left: ceil((@line-height-computed / 2));
         border-left: 2px solid @app-blue;
         color: @app-blue;
