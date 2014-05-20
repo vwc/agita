@@ -14881,6 +14881,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 {
     color: #fff;
 }
+.affix
+{
+    z-index: 1030;
+    bottom: 150px;
+}
 .hero-header
 {
     margin-bottom: -18.75px;

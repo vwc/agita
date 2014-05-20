@@ -2014,7 +2014,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
 
     $(document.body).scrollspy({target: '#hero-toc'});
     $(window).on('load', function () {
-      $body.scrollspy('refresh');
+      $(document.body).scrollspy('refresh');
     });
     setTimeout(function () {
         var $sideBar = $('#hero-toc');

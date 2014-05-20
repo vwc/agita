@@ -8,7 +8,7 @@
 
     $(document.body).scrollspy({target: '#hero-toc'});
     $(window).on('load', function () {
-      $body.scrollspy('refresh');
+      $(document.body).scrollspy('refresh');
     });
     setTimeout(function () {
         var $sideBar = $('#hero-toc');
