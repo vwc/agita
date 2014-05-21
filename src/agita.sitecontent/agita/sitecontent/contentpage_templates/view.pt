@@ -32,7 +32,7 @@
             <img tal:define="obj item/getObject;
                              scales obj/@@images"
               tal:replace="structure python: scales.tag('image',
-                           width=200, height=200, direction='down')"
+                           width=200, height=200)"
               />
           </div>
         </tal:block>

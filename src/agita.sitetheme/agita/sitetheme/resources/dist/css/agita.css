@@ -1,7 +1,7 @@
 /*!
  * agita
  */
-/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html
 {
     font-family: sans-serif;
@@ -6987,7 +6987,7 @@ button.close
     line-height: 1.4;
 
     position: absolute;
-    z-index: 1030;
+    z-index: 1070;
 
     display: block;
     visibility: visible;
@@ -7119,7 +7119,7 @@ button.close
 .popover
 {
     position: absolute;
-    z-index: 1010;
+    z-index: 1060;
     top: 0;
     left: 0;
 
@@ -14881,10 +14881,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 {
     color: #fff;
 }
+@media (min-width: 768px) and (max-width: 991px)
+{
+    .hero-toc
+    {
+        display: none !important;
+    }
+}
 .affix
 {
     z-index: 1030;
-    bottom: 150px;
+    top: 188px;
 }
 .hero-header
 {
@@ -14936,6 +14943,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     border-top: 1px solid #eee;
     background: url(../assets/img/footer.jpg) no-repeat 0 0 #8fd9fc;
     background-size: cover;
+}
+.app-footer a
+{
+    color: #fff;
 }
 .app-footer-contactbar
 {
