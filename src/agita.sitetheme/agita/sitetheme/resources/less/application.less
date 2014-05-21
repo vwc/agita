@@ -6,6 +6,10 @@
     .clearfix();
 }
 
+a:hover {
+  .transition(color .5s linear);
+}
+
 .template-navigation-controlpanel .label:empty {
     display: inline-block;
 }
@@ -104,6 +108,10 @@
 }
 .app-page-title {
     color: @app-blue;
+    font-size: @font-size-h2;
+    @media (min-width: @screen-sm-min) {
+      font-size: @font-size-h1;
+    }
 }
 .app-page-headline {
 }
@@ -187,17 +195,41 @@ body.template-frontpage-view .panelgrid {
 }
 
 .contentpanel {
-    h2,
-    h3 {
-        padding-left: ceil((@line-height-computed / 2));
-        border-left: 2px solid @app-blue;
-        color: @app-blue;
+  h2 {
+    padding-left: ceil((@line-height-computed / 2));
+    border-left: 2px solid @app-blue;
+    color: @app-blue;
+    font-size: @font-size-h3;
+    @media (min-width: @screen-sm-min) {
+      font-size: @font-size-h2;
     }
-    &.contentpanel-richtext {
-        font-size: (@font-size-base + 2);
-        @media (min-width: @screen-md-min) {
-            width: @container-md;
-        }
+  }
+  &.contentpanel-richtext {
+    font-size: (@font-size-base + 2);
+    @media (min-width: @screen-md-min) {
+        width: @container-md;
     }
+  }
+}
+
+
+// Slab text for responsive
+
+.slabtexted .slabtext {
+  display:-moz-inline-box;
+  display:inline-block;
+  white-space:nowrap;
+}
+.slabtextinactive .slabtext {
+  display:inline;
+  white-space:normal;
+  font-size:1em !important;
+  letter-spacing:inherit !important;
+  word-spacing:inherit !important;
+  *letter-spacing:0 !important;
+  *word-spacing:0 !important;
+}
+.slabtextdone .slabtext {
+  display:block;
 }
 

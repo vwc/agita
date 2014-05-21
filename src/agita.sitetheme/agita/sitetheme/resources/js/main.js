@@ -6,6 +6,10 @@
     if ($('body').hasClass('lt-ie7')) {return; }
     // Application specific javascript code goes here
 
+    //$('.contentpanel-heading').slabText({
+    //  'minCharsPerLine': 12,
+    //  'maxFontSize': 40
+    //});
     $(document.body).scrollspy({target: '#hero-toc'});
     $(window).on('load', function () {
       $(document.body).scrollspy('refresh');
