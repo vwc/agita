@@ -2252,7 +2252,9 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
     if ($('body').hasClass('lt-ie7')) {return; }
     // Application specific javascript code goes here
 
-    $('h2').slabText();
+    $('h2').slabText({
+      'minCharsPerLine': 12
+    });
     $(document.body).scrollspy({target: '#hero-toc'});
     $(window).on('load', function () {
       $(document.body).scrollspy('refresh');

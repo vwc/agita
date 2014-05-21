@@ -11755,8 +11755,7 @@ body.template-frontpage-view .panelgrid {
   border-color: #cee49d;
   background: url(../assets/img/smile-green.png) no-repeat 0 100% transparent;
 }
-.contentpanel h2,
-.contentpanel h3 {
+.contentpanel h2 {
   padding-left: 13px;
   border-left: 2px solid #8ecbb7;
   color: #8ecbb7;
