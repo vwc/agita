@@ -215,9 +215,16 @@ body.template-frontpage-view .panelgrid {
 // Override grid styles for frontpage
 .template-frontpage-view {
   .panelgrid-row-3 {
+    margin-top: ceil((@line-height-computed * 2));
     padding-top: ceil((@line-height-computed * 2));
     border-top: 2px solid @app-blue-light;
     .text-muted();
+    h2 {
+      .text-muted();
+      > a {
+        .text-muted();
+      }
+    }
   }
 }
 
