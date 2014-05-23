@@ -15282,6 +15282,13 @@ body.template-frontpage-view .panelgrid
         width: 970px;
     }
 }
+.panelgrid-row-3
+{
+    padding-top: 50px;
+
+    color: #999;
+    border-top: 2px solid #eaf5f1;
+}
 .slabtexted .slabtext
 {
     display: -moz-inline-box;
