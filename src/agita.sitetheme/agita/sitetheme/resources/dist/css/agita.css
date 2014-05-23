@@ -15284,10 +15284,19 @@ body.template-frontpage-view .panelgrid
 }
 .template-frontpage-view .panelgrid-row-3
 {
+    margin-top: 50px;
     padding-top: 50px;
 
     color: #999;
     border-top: 2px solid #eaf5f1;
+}
+.template-frontpage-view .panelgrid-row-3 h2
+{
+    color: #999;
+}
+.template-frontpage-view .panelgrid-row-3 h2 > a
+{
+    color: #999;
 }
 .slabtexted .slabtext
 {
