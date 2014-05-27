@@ -15293,6 +15293,7 @@ body.template-frontpage-view .panelgrid
 .template-frontpage-view .panelgrid-row-3 h2
 {
     color: #999;
+    border-color: #999;
 }
 .template-frontpage-view .panelgrid-row-3 h2 > a
 {

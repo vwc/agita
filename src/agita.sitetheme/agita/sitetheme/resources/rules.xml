@@ -160,6 +160,11 @@
             </rules>
         </rules>
 
+        <replace css:content-children=".documentFirstHeading"
+            css:theme-children="#app-page-title" />
+        <replace css:content-children=".documentDescription"
+            css:theme-children="#hero-lead"
+            css:if-content=".documentDescription" />
         <!-- Document Content -->
         <replace css:content-children="#content"
             css:theme-children="#content" />
