@@ -9,8 +9,12 @@ class FrontpageView(grok.View):
     grok.require('zope2.View')
     grok.name('frontpage-view')
 
-    def panelpage(self):
+    def frontpage_content(self):
         portal = api.portal.get()
         frontpage = portal['frontpage-content']
+        return frontpage
+
+    def panelpage(self):
+        frontpage = self.frontpage_content()
         tmpl = frontpage.restrictedTraverse('@@panelpage')()
         return tmpl

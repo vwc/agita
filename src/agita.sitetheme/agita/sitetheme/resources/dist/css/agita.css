@@ -15271,11 +15271,6 @@ body.template-frontpage-view .panelgrid
         font-size: 38px;
     }
 }
-.contentpanel h2 > a:hover
-{
-    color: #fff;
-    background: #8ecbb7;
-}
 .contentpanel.contentpanel-richtext
 {
     font-size: 20px;

@@ -11,8 +11,21 @@
   <metal:content-core define-macro="main">
 
     <div class="app-page">
-    
-        <div cid="fp-panelpage">
+
+      <div class="app-page-content" id="app-page-content">
+        <div class="app-page-header" id="app-page-header"
+          tal:define="item view/frontpage_content">
+          <div class="app-page-title" id="app-page-title">
+            <h1 class="documentFirstHeading app-page-headline" tal:content="item/Title" />
+          </div>
+          <p class="documentDescription lead app-page-abstract"
+            id="app-page-abstract"
+            tal:condition="item/Description"
+            tal:content="item/Description" />
+        </div>
+      </div>
+
+        <div cid="fp-panelpage" id="content-core">
           <div tal:replace="structure view/panelpage" />
         </div>
 

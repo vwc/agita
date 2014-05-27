@@ -106,6 +106,16 @@
                 css:theme-children="#app-signin-content"
                 css:if-content="body.template-pwreset_finish" />
 
+        <rules css:if-content="body.template-frontpage-view">
+            <replace css:content-children=".documentFirstHeading"
+                    css:theme-children="#app-page-title" />
+                <replace css:content-children="#app-page-abstract"
+                    css:theme-children="#hero-lead"
+                    css:if-content="#app-page-abstract" />
+            <replace css:content-children="#content-core"
+                    css:theme-children="#content" />
+        </rules>
+
         <rules css:if-content="body.portaltype-agita-sitecontent-contentpage">
             <rules css:if-content="body.template-view">
                 <replace css:content-children=".documentFirstHeading"
