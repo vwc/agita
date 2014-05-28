@@ -166,6 +166,10 @@
             css:theme-children="#hero-lead"
             css:if-content=".documentDescription" />
         <!-- Document Content -->
+        <replace css:content-children="#content-core"
+            css:theme-children="#content"
+            css:if-content="body.section-aktuelles" />
+
         <replace css:content-children="#content"
             css:theme-children="#content" />
 
