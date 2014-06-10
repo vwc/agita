@@ -165,6 +165,8 @@
         <replace css:content-children=".documentDescription"
             css:theme-children="#hero-lead"
             css:if-content=".documentDescription" />
+        <drop css:theme-children="#hero-lead"
+            css:if-not-content=".documentDescription" />
         <!-- Document Content -->
         <replace css:content-children="#content-core"
             css:theme-children="#content"
