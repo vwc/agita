@@ -15299,6 +15299,14 @@ body.template-frontpage-view .panelgrid
 {
     color: #999;
 }
+.app-link-fb
+{
+    display: block;
+
+    margin-top: 13px;
+
+    color: #fff;
+}
 .slabtexted .slabtext
 {
     display: -moz-inline-box;
