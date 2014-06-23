@@ -14989,6 +14989,12 @@ a:hover
          -o-transition: color .5s linear;
             transition: color .5s linear;
 }
+img.image-left,
+img.image-right,
+.captioned img
+{
+    border: none;
+}
 .template-navigation-controlpanel .label:empty
 {
     display: inline-block;
