@@ -58,6 +58,33 @@ img.image-right,
     margin-top: @navbar-height;
 }
 
+// Infobar used for browser update notices
+// ----------------------
+
+.app-infobar {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: @zindex-navbar-fixed;
+  min-height: @navbar-height;
+  background: @state-warning-bg;
+  border-bottom: 2px solid @state-warning-border;
+}
+
+.app-infobar-content {
+  .container();
+  padding-top: 20px;
+  color: @state-warning-text;
+}
+
+// Account for infobar height when available
+.app-infobar + .app-navbar,
+.app-infobar + .app-brandbar {
+    margin-top: @navbar-height;
+}
+
+
+
 .app-header {
     .jumbotron();
 }

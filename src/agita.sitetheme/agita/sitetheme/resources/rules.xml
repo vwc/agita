@@ -28,11 +28,12 @@
         <theme href="dist/theme.html" />
 
         <replace css:theme="title" css:content="title" />
-        <replace css:theme="base" css:content="base" />
+        <after theme="/html/head/title" css:content="base" />
         <!-- Add meta tags -->
         <drop theme="/html/head/meta" />
 
-        <after content="/html/head/meta" theme-children="/html/head" />
+        <before content="/html/head/meta" theme="/html/head/title" />
+
         <!-- Copy style, script and link tags in the order they appear in the content -->
         <after
             content="/html/head/style | /html/head/script | /html/head/link"

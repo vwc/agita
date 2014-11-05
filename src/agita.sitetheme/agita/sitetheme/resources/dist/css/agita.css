@@ -7555,7 +7555,9 @@ button.close
 ul.formTabs:before,
 ul.formTabs:after,
 .listingBar:before,
-.listingBar:after
+.listingBar:after,
+.app-infobar-content:before,
+.app-infobar-content:after
 {
     display: table;
 
@@ -7577,7 +7579,8 @@ ul.formTabs:after,
 .panel-body:after,
 .modal-footer:after,
 ul.formTabs:after,
-.listingBar:after
+.listingBar:after,
+.app-infobar-content:after
 {
     clear: both;
 }
@@ -15065,6 +15068,69 @@ img.image-right,
 }
 .app-toolbar + .app-navbar,
 .app-toolbar + .app-brandbar
+{
+    margin-top: 75px;
+}
+.app-infobar
+{
+    position: fixed;
+    z-index: 1030;
+    right: 0;
+    left: 0;
+
+    min-height: 75px;
+
+    border-bottom: 2px solid #faebcc;
+    background: #fcf8e3;
+}
+.app-infobar-content
+{
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    color: #8a6d3b;
+}
+@media (min-width: 768px)
+{
+    .app-infobar-content
+    {
+        width: 750px;
+    }
+}
+@media (min-width: 992px)
+{
+    .app-infobar-content
+    {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px)
+{
+    .app-infobar-content
+    {
+        width: 1170px;
+    }
+}
+.app-infobar-content > .navbar-header,
+.app-infobar-content > .navbar-collapse
+{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+@media (min-width: 768px)
+{
+    .app-infobar-content > .navbar-header,
+  .app-infobar-content > .navbar-collapse
+    {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+.app-infobar + .app-navbar,
+.app-infobar + .app-brandbar
 {
     margin-top: 75px;
 }
