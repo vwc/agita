@@ -12923,10 +12923,13 @@ if (typeof define === "function" && define.amd) {
     if ($('body').hasClass('lt-ie7')) {return; }
     // Application specific javascript code goes here
 
-    //$('.contentpanel-heading').slabText({
-    //  'minCharsPerLine': 12,
-    //  'maxFontSize': 40
-    //});
+    if (!Modernizr.csstransitions) { // Test if CSS transitions are supported
+        $(function () {
+            $('.dim-in').on('load', function () {
+                $(this).fadeIn();
+            });
+        });
+    }
     $(document.body).scrollspy({target: '#hero-toc'});
     $(window).on('load', function () {
       $(document.body).scrollspy('refresh');
