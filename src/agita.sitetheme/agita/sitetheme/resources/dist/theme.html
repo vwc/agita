@@ -11,9 +11,9 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <title>
-  
+
     Getting started &middot; Bootstrap
-  
+
 </title>
 <link href="css/agita.css" rel="stylesheet">
 <!--[if lt IE 9]>
@@ -100,9 +100,12 @@
                     <p class="h4 app-brand-claim app-brand-claim-primary animated fadeInDownBig">Agentur f&uuml;r Kindertagespflege</p>
                     <p class="h5 app-brand-claim app-brand-claim-secondary animated fadeInRight">Deutscher Kinderschutzbund Augsburg</p>
                     <img class="app-brand-claim-image" src="assets/img/kinderschutzbund.png" title="agita" />
+                    <p>
                     <a class="app-link-fb" href="https://www.facebook.com/pages/agita-Agentur-f%C3%BCr-Kindertagespflege-Augsburg/172671169419652?fref=ts" rel="no-follow">
                         <i class="fa fa-facebook-square fa-2x"></i>
                     </a>
+                    <a href="/feadback" class="h4 app-brand-claim app-brand-claim-primary animated fadeInRight">Feedback</a>
+                  </p>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-pull-4">
@@ -259,6 +262,25 @@
 (see: http://www.feedthebot.com/pagespeed/defer-loading-javascript.html)
 ================================================== -->
 <script type="text/javascript">
+
+if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)){ //test for MSIE x.x;
+ var ieversion=new Number(RegExp.$1) // capture x.x portion and store as a number
+ if (ieversion>=9)
+  document.write("You're using IE9 or above")
+ else if (ieversion>=8)
+  document.write("You're using IE8 or above")
+ else if (ieversion>=7)
+  document.write("You're using IE7.x")
+ else if (ieversion>=6)
+  document.write("You're using IE6.x")
+ else if (ieversion>=5)
+  document.write("You're using IE5.x")
+}
+else
+ document.write("n/a")
+</script>
+
+<script type="text/javascript">
 function downloadJSAtOnload() {
 var element = document.createElement("script");
 element.src = "js/agita.min.js";
@@ -287,6 +309,18 @@ else window.onload = downloadJSAtOnload;
 </script>
     </div>
     <div>
+
+    <script>
+    var $buoop = {c:2};
+    function $buo_f(){
+      var e = document.createElement("script");
+      e.src = "//browser-update.org/update.js";
+      document.body.appendChild(e);
+    };
+    try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+    catch(e){window.attachEvent("onload", $buo_f)}
+    </script>
+    
 <!-- Piwik -->
 <script type="text/javascript">
   var _paq = _paq || [];
