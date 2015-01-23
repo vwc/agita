@@ -316,7 +316,8 @@ body.template-frontpage-view .panelgrid {
     border-left: 2px solid #8ecbb7;
 }
 
-.section-feedback .documentFirstHeading {
+.section-feedback .documentFirstHeading .documentDescription {
+  display: hidden;
   font-size: 0px;
 }
 
@@ -340,3 +341,11 @@ body.template-frontpage-view .panelgrid {
   display:block;
 }
 
+.section-feedback {
+  .documentFirstHeading {
+    font-size: 0;
+  }
+  .documentDescription {
+    font-size: 0;
+  }
+}
